@@ -960,9 +960,6 @@ https://cdnhls.xbdbotv.live/live/MTk3MTU1ODQ6YThsY2E2YTk4dWpna3Q2bXcydDZwYXRxOnE
 https://cdnflv.xbdbotv.live/live/MTk3MzI2NjY6dGljMHIwY2xmNjhsaWxyajl3eDMyeXd6OnNxMHNnYmt5bHgxZDZiZTlubDk0cWZ1Yg.flv
 #EXTINF:-1 tvg-logo="https://d1c0s7hi3ugzoc.cloudfront.net/teams/racing-santander-9818" group-title="Bia Ôm TV" , 02:00 12/10 ⚽ Racing Santander vs Valencia (TÔM CHIÊN) [hls]
 https://cdnhls.xbdbotv.live/live/MTk3MzI2NjY6dGljMHIwY2xmNjhsaWxyajl3eDMyeXd6OnNxMHNnYmt5bHgxZDZiZTlubDk0cWZ1Yg/index.m3u8
-#EXTINF:-1 tvg-logo="https://media.chuoichientv.net/media/uploads/20250623_133412_588cf309.png" group-title="Chuối Chiên TV" , 🟢 12:00 11/10 ⚽ Gwangju FC vs Ulsan Hyundai FC (Chuối Kem) [FHD] [hls]
-#EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
-https://gckc0525.edgemaxcdn.org/live/chuoikemhd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://media.chuoichientv.net/media/uploads/20250623_132412_3fea3f62.png" group-title="Chuối Chiên TV" , 🟢 14:00 11/10 ⚽ Kawasaki Frontale vs Nagoya Grampus (Chuối Nhỏ) [FHD] [hls]
 #EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
 https://gckc0525.edgemaxcdn.org/live/chuoinhohd/playlist.m3u8
@@ -1090,12 +1087,6 @@ https://freem3u.xyz/static/no-signal/low.m3u8
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://images.keovip88.net/images/teams/racing-santander.png" group-title="Giờ Vàng TV" , 02:00 12/10 ⚽ Racing Santander vs Valencia (blv-mason) [hls]
 https://freem3u.xyz/static/no-signal/low.m3u8
-#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261009/3dbec1152940d93784124e6d83b43f83.png" group-title="Sút Bóng TV" , 🟢 12:00 11/10 🏀 Anyang JungKwanJang vs LG Sakers (BLV HENRY)
-#EXTVLCOPT:http-referrer=https://sutbong-tv.net/
-https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1791705852-0-0-ae08830c033c3f2f5e29178a4debc838
-#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261009/4a7a49a989061ec259d933f801d06fe1.png" group-title="Sút Bóng TV" , 🟢 12:00 11/10 🏀 Southern Hoiho W vs Tokomanawa Queens W (A CHÈ)
-#EXTVLCOPT:http-referrer=https://sutbong-tv.net/
-https://pull.niur.live/live/stream-356042_lhd.m3u8?txSecret=fcc0482c100a54e6511b8f8a240a9c37&txTime=6acb940d
 #EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261008/a4e1ca82b8e189b379202d1aa08c1f41.png" group-title="Sút Bóng TV" , 🟢 13:00 11/10 ⚽ Iwaki FC vs Blaublitz Akita (BLV RÔSI)
 #EXTVLCOPT:http-referrer=https://sutbong-tv.net/
 https://pull.niur.live/live/stream-9912102_lhd.m3u8?txSecret=46c75fc0aa608bd47a28247df391f083&txTime=6acb940d
