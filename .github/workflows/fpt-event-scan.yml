@@ -53,7 +53,27 @@ jobs:
           inactive = int(status["inactiveEntries"])
           errors = int(status["probeErrors"])
 
-          assert candidates == 46, f"Expected 46 source URLs, got {candidates}"
+          # Derive the expected candidate count from the current M3U source.
+          # The source list may legitimately grow; do not hard-code an old count.
+          source_lines = Path("sources/fpt-events-source.m3u").read_text(encoding="utf-8").splitlines()
+          source_urls = []
+          for index, line in enumerate(source_lines):
+              if not line.strip().startswith("#EXTINF"):
+                  continue
+              for candidate_line in source_lines[index + 1:min(index + 8, len(source_lines))]:
+                  candidate = candidate_line.strip()
+                  if not candidate or candidate.startswith("#"):
+                      continue
+                  if candidate.startswith(("http://", "https://")):
+                      source_urls.append(candidate)
+                      break
+
+          expected_candidates = len(set(source_urls))
+          assert expected_candidates > 0, "Source M3U contains no valid unique HTTP(S) URLs"
+          assert candidates == expected_candidates, (
+              f"Expected {expected_candidates} unique source URLs parsed from "
+              f"sources/fpt-events-source.m3u, got {candidates}"
+          )
           assert live + inactive + errors == candidates, "Scan totals do not add up"
           assert live > 0 or errors == 0, (
               f"Scan produced no verified live stream and has {errors} probe errors"
