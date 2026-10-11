@@ -1,5 +1,7 @@
 #EXTM3U
 #NM7-SCAN-VERIFIED: true
 #NM7-SCAN-MODE: vietnam-transport-source-only
+#EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT 03
+https://vips-livecdn.fptplay.net/live/media/su-kien-03/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 07
 https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8
