@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-11T07:02:34.855194+00:00",
+  "generatedAt": "2026-10-11T07:07:59.290651+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 46,
   "liveEntries": 3,
-  "inactiveEntries": 42,
-  "probeErrors": 1,
+  "inactiveEntries": 35,
+  "probeErrors": 8,
   "allProbeErrorsAre403": false,
   "scanHealthy": false,
   "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 45,
-  "event07Transport": "203.205.49.2:10183",
+  "transportCount": 38,
+  "event07Transport": "203.205.49.2:10052",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 03",
@@ -60,10 +60,10 @@
       "name": "Sự kiện FPT 04",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-04/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 05",
@@ -78,10 +78,10 @@
       "name": "Sự kiện FPT 06",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-06/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 07",
@@ -105,19 +105,19 @@
       "name": "Sự kiện FPT 09",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-09/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 10",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-10/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 11",
@@ -159,10 +159,10 @@
       "name": "Sự kiện FPT 15",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-15/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 4K 01",
@@ -276,10 +276,10 @@
       "name": "Sự kiện FPT Event 01",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-01/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT Event 01 4K",
@@ -402,10 +402,10 @@
       "name": "Sự kiện FPT Event 08 4K",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-08-4k/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
+      "status": 403,
       "content_type": "text/html",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT Event 09",
