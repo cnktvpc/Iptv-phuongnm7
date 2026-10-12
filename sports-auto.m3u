@@ -541,10 +541,6 @@ https://live2.zktsva.app/live/294335.m3u8
 https://live2.zktsva.app/live/303098.flv
 #EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/13e2038bd23a38ce32a3eb259c8bf7d8.png" group-title="Gà Vàng 33 TV" , 02:00 13/10 ⚽ Levante vs Sevilla FC (Gà Siêu Péo) [hls]
 https://live2.zktsva.app/live/303098.m3u8
-#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/08fd013b-5bd7-47f0-b7ed-bb50c3291302" group-title="S8 TV" , 🟢 12:00 12/10 ⚽ Burgos CF vs Granada CF (NGƯỜI BẠC) [flv]
-https://flv.lauthaitv.cc/live/burgos-granada-spa2nd.flv
-#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/08fd013b-5bd7-47f0-b7ed-bb50c3291302" group-title="S8 TV" , 🟢 12:00 12/10 ⚽ Burgos CF vs Granada CF (NGƯỜI BẠC) [hls]
-https://hls.lauthaitv.cc/live/burgos-granada-spa2nd/index.m3u8
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/3fad3ae0-aafb-4ef1-88ec-d51aa5807dac" group-title="S8 TV" , 🟢 14:00 12/10 ⚽ Shanxi Chongde Ronghai vs Jiangxi Lushan (NGƯỜI SẮT) [flv]
 https://flv.lauthaitv.cc/live/shanxi-jiangxi-chnl2.flv
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/3fad3ae0-aafb-4ef1-88ec-d51aa5807dac" group-title="S8 TV" , 🟢 14:00 12/10 ⚽ Shanxi Chongde Ronghai vs Jiangxi Lushan (NGƯỜI SẮT) [hls]
@@ -796,12 +792,6 @@ https://freem3u.xyz/static/no-signal/low.m3u8
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://images.keovip88.net/images/teams/levante.png" group-title="Giờ Vàng TV" , 02:00 13/10 ⚽ Levante vs Sevilla (blv-mason) [hls]
 https://freem3u.xyz/static/no-signal/low.m3u8
-#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261010/373ecbfeae2113376195cfd3c09ea2c0.png" group-title="Sút Bóng TV" , 🟢 12:05 12/10 🏀 Saga vs Gunma (A CHÈ)
-#EXTVLCOPT:http-referrer=https://sutbong-tv.net/
-https://pull.niur.live/live/stream-356042_lhd.m3u8?txSecret=e4e787a83f65ae6cb27439d8d2794969&txTime=6accdb01
-#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261010/373ecbfeae2113376195cfd3c09ea2c0.png" group-title="Sút Bóng TV" , 🟢 12:05 12/10 🏀 Saga vs Gunma (BLV HENRY)
-#EXTVLCOPT:http-referrer=https://sutbong-tv.net/
-https://pull.niues.live/live/stream-9912112_lhd.m3u8?auth_key=1791792305-0-0-c80f37f01358db3225da440dac077a84
 #EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261008/60ab62e32b50e47439e997653d75925b.png" group-title="Sút Bóng TV" , 🟢 14:00 12/10 ⚽ Shanxi Chongde Ronghai vs Jiangxi Lushan (BLV CÒ)
 #EXTVLCOPT:http-referrer=https://sutbong-tv.net/
 https://freem3u.xyz/static/no-signal/low.m3u8
