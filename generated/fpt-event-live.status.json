@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-13T20:36:14.578538+00:00",
+  "generatedAt": "2026-10-13T20:45:13.531843+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 4,
-  "inactiveEntries": 121,
-  "probeErrors": 2,
+  "inactiveEntries": 122,
+  "probeErrors": 1,
   "allProbeErrorsAre403": false,
   "scanHealthy": false,
   "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 125,
-  "event07Transport": "203.205.49.2:10060",
+  "transportCount": 126,
+  "event07Transport": "14.225.2.98:808",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
@@ -262,10 +262,10 @@
       "name": "Sự kiện FPT Event 05 4K",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-05-4k/dash_hvc/index.mpd",
       "live": false,
-      "status": 403,
+      "status": 404,
       "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT 4K 04",
@@ -523,10 +523,10 @@
       "name": "Sự Kiện FPT Event 05 (4K)",
       "url": "https://fbox-livecdn.fptplay.net/live/media/event-05-4k/4k_hls_hvc/index.m3u8",
       "live": false,
-      "status": 404,
+      "status": 403,
       "content_type": "text/html",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự Kiện FPT Event 05 (FHD)",
