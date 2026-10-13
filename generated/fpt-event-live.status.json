@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-13T09:21:57.762322+00:00",
+  "generatedAt": "2026-10-13T09:31:32.115756+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 7,
-  "inactiveEntries": 116,
-  "probeErrors": 4,
+  "inactiveEntries": 117,
+  "probeErrors": 3,
   "allProbeErrorsAre403": false,
   "scanHealthy": false,
   "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 123,
-  "event07Transport": "103.20.102.155:2924",
+  "transportCount": 124,
+  "event07Transport": "203.205.49.2:10211",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
@@ -319,10 +319,10 @@
       "name": "Sự kiện FPT Event 02 4K",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-02-4k/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT Event 03",
@@ -472,10 +472,10 @@
       "name": "Sự Kiện FPT Event 01 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-01-4k/4k_hls_avc_v6/index.m3u8?sign=1791624102-MDc1OTczMzQ-0-00de8e921c801d8adb815ad0956258ce",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự Kiện FPT Event 02 (4K)",
@@ -580,10 +580,10 @@
       "name": "Sự Kiện FPT Event 07 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-07-4k/4k_hls_avc_v6/index.m3u8?sign=REPLACE_WITH_VALID_SIGNATURE_07",
       "live": false,
-      "status": 403,
+      "status": 404,
       "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "error": null,
+      "inactive_reason": "HTTP 404"
     }
   ]
 }
