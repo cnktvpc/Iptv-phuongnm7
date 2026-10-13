@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-13T21:04:54.563028+00:00",
+  "generatedAt": "2026-10-13T21:14:31.884174+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 4,
-  "inactiveEntries": 123,
-  "probeErrors": 0,
+  "inactiveEntries": 120,
+  "probeErrors": 3,
   "allProbeErrorsAre403": false,
-  "scanHealthy": true,
-  "partialScan": false,
+  "scanHealthy": false,
+  "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 127,
-  "event07Transport": "203.205.49.2:10051",
+  "transportCount": 124,
+  "event07Transport": "14.225.2.98:808",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
@@ -46,10 +46,10 @@
       "name": "Sự kiện FPT 02",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-02/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT 03",
@@ -325,10 +325,10 @@
       "name": "Sự kiện FPT Event 03 4K",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-03-4k/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự kiện FPT Event 04",
@@ -532,10 +532,10 @@
       "name": "Sự Kiện FPT Event 05 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-05-4k/4k_hls_avc_v6/index.m3u8?sign=REPLACE_WITH_VALID_SIGNATURE_05",
       "live": false,
-      "status": 404,
+      "status": 403,
       "content_type": "text/html",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự Kiện FPT Event 06 (4K)",
