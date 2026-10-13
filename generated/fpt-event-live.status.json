@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-13T10:21:55.517180+00:00",
+  "generatedAt": "2026-10-13T10:32:08.862020+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 6,
-  "inactiveEntries": 115,
-  "probeErrors": 6,
+  "inactiveEntries": 121,
+  "probeErrors": 0,
   "allProbeErrorsAre403": false,
-  "scanHealthy": false,
-  "partialScan": true,
+  "scanHealthy": true,
+  "partialScan": false,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 121,
-  "event07Transport": "203.205.49.2:10178",
+  "transportCount": 127,
+  "event07Transport": "27.72.244.228:8080",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
@@ -279,19 +279,19 @@
       "name": "Sự kiện FPT 4K 04",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-04-4k/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT Event 01",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-01/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT Event 01 4K",
@@ -423,10 +423,10 @@
       "name": "Sự kiện FPT Event 09",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-09/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT Event 09 4K",
