@@ -307,14 +307,6 @@ https://playback.livetl002.com/live/69f42e961f739deff81510c0.m3u8
 https://playback.livetl002.com/live/69d37c3a4da3e15776b6db56.flv
 #EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/basketball/team/e299ddecec93dc5c8db83b1761e2fa1f.png" group-title="Gà Vàng 24h TV" , 06:00 14/10 🏀 Toronto Raptors vs New York Knicks (Titan) [hls]
 https://playback.livetl002.com/live/69d37c3a4da3e15776b6db56.m3u8
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/tennis/team/y0or5of1x08mwzv/image/small" group-title="Xôi Lạc Z TV" , 🟢 18:10 13/10 🥎 Hubert Hurkacz vs Alejandro Davidovich Fokina (HD LUCAS)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-31.flv?auth_key=3000001791899651-0-0-f199b5b8acae709b1ca2b9dc013f82cb
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/tennis/team/y0or5of1x08mwzv/image/small" group-title="Xôi Lạc Z TV" , 🟢 18:10 13/10 🥎 Hubert Hurkacz vs Alejandro Davidovich Fokina (LUCAS)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.jorvakstreamcache.com/live/channel31.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/6ypq3nh09npmd7o/image/small" group-title="Xôi Lạc Z TV" , 🟢 19:00 13/10 ⚽ RB Leipzig U19 vs PSV Eindhoven U19 (HD NEMO)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
@@ -847,8 +839,6 @@ https://gckc0525.edgemaxcdn.org/live/chuoitayhd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://media.chuoichientv.net/media/uploads/20250623_133531_9d48bb0f.png" group-title="Chuối Chiên TV" , 08:30 14/10 ⚽ Millonarios vs Once Caldas (Chuối Sấy) [FHD] [hls]
 #EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
 https://gckc0525.edgemaxcdn.org/live/chuoisayhd/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://static.flashscore.com/res/image/data/xGuYHTGG-xEfD5uDB.png" group-title="Giờ Vàng TV" , 🟢 18:10 13/10 🥎 Hubert Hurkacz vs Alejandro Davivdovich Fokina (Mù) [hls]
-https://ftlh5sc02iliv.vcdn.cloud/1791875453_hd/1791875453_hd@720p.m3u8
 #EXTINF:-1 tvg-logo="https://images.keovip88.net/images/teams/buriram-united.png" group-title="Giờ Vàng TV" , 🟢 19:15 13/10 ⚽ Buriram United vs Beijing Guoan (Mason) [hls]
 https://ftlh5sc02iliv.vcdn.cloud/1791879021_hd/1791879021_hd@720p.m3u8
 #EXTINF:-1 tvg-logo="https://images.keovip88.net/images/teams/cong-an-ha-noi.png" group-title="Giờ Vàng TV" , 🟢 19:15 13/10 ⚽ Công An Hà Nội vs Kashima Antlers (Bee) [hls]
