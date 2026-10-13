@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-13T18:06:33.899841+00:00",
+  "generatedAt": "2026-10-13T18:17:07.616279+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 4,
-  "inactiveEntries": 123,
-  "probeErrors": 0,
+  "inactiveEntries": 122,
+  "probeErrors": 1,
   "allProbeErrorsAre403": false,
-  "scanHealthy": true,
-  "partialScan": false,
+  "scanHealthy": false,
+  "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 127,
-  "event07Transport": "42.116.10.198:443",
+  "transportCount": 126,
+  "event07Transport": "203.205.49.2:10110",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
@@ -469,10 +469,10 @@
       "name": "Sự Kiện FPT Event 02 (4K)",
       "url": "https://fbox-livecdn.fptplay.net/live/media/event-02-4k/4k_hls_hvc/index.m3u8",
       "live": false,
-      "status": 404,
-      "content_type": "text/html; charset=iso-8859-1",
-      "error": null,
-      "inactive_reason": "HTTP 404"
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
+      "inactive_reason": null
     },
     {
       "name": "Sự Kiện FPT Event 02 (FHD)",
