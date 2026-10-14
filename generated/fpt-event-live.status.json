@@ -1,19 +1,19 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-14T14:10:00.845721+00:00",
+  "generatedAt": "2026-10-14T14:16:46.073770+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
-  "liveEntries": 3,
-  "inactiveEntries": 124,
-  "probeErrors": 0,
+  "liveEntries": 2,
+  "inactiveEntries": 120,
+  "probeErrors": 5,
   "allProbeErrorsAre403": false,
-  "scanHealthy": true,
-  "partialScan": false,
+  "scanHealthy": false,
+  "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 127,
-  "event07Transport": "203.205.49.2:10197",
+  "transportCount": 122,
+  "event07Transport": "14.225.240.23:8562",
   "liveChannels": [
     {
       "name": "Sự kiện FPT Event 07",
@@ -22,10 +22,6 @@
     {
       "name": "Sự Kiện FPT Su Kiện 01 (4K)",
       "url": "https://fbox-livecdn.fptplay.net/live/media/su-kien-01-4k/4k_hls_hvc/index.m3u8"
-    },
-    {
-      "name": "Sự Kiện FPT Su Kiện 01 (FHD)",
-      "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-01-4k/4k_hls_avc_v6/index.m3u8?sign=1791624102-MDc1OTczMzQ-0-00de8e921c801d8adb815ad0956258ce"
     }
   ],
   "errors": [
