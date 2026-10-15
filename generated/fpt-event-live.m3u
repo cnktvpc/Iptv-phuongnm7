@@ -1,7 +1,9 @@
 #EXTM3U
 #NM7-SCAN-VERIFIED: true
 #NM7-SCAN-MODE: vietnam-transport-source-only
+#EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 02
+https://vips-livecdn.fptplay.net/live/media/event-02/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 07
 https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8
-#EXTINF:-1 group-title="SỰ KIỆN FPT",Sự Kiện FPT Event 01 (FHD)
-https://vips-livecdn.fptplay.net/live/media/event-01-4k/4k_hls_avc_v6/index.m3u8?sign=1791624102-MDc1OTczMzQ-0-00de8e921c801d8adb815ad0956258ce
+#EXTINF:-1 group-title="SỰ KIỆN FPT",TEST Event 02 (event-a)
+https://event-a.fptplay53.net/live/media/event-02/hls_avc_v6/event-02-avc1_5600000=10000.m3u8
