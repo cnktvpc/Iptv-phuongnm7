@@ -1,18 +1,18 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-15T02:10:57.275735+00:00",
+  "generatedAt": "2026-10-15T02:20:37.417168+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
   "liveEntries": 3,
-  "inactiveEntries": 122,
-  "probeErrors": 2,
+  "inactiveEntries": 124,
+  "probeErrors": 0,
   "allProbeErrorsAre403": false,
-  "scanHealthy": false,
-  "partialScan": true,
+  "scanHealthy": true,
+  "partialScan": false,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 125,
+  "transportCount": 127,
   "event07Transport": "27.73.208.144:2109",
   "liveChannels": [
     {
@@ -87,10 +87,10 @@
       "name": "Sự kiện FPT 07",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-07/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT 08",
