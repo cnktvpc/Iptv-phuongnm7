@@ -1,0 +1,81 @@
+name: Deploy and verify NM7 default IPTV Workers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cloudflare/iptv-live-merge/**"
+      - ".github/workflows/deploy-nm7-default-playlist-cutover.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-nm7-default-playlist-cutover
+  cancel-in-progress: false
+
+jobs:
+  deploy-and-verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout deployment configuration and fallback Worker
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Checkout current default playlist Worker source
+        uses: actions/checkout@v5
+        with:
+          repository: dungntk9/Iptv
+          ref: main
+          path: default-playlist
+
+      - name: Validate both Worker scripts
+        run: |
+          node --check default-playlist/worker.js
+          node --check cloudflare/iptv-live-merge/src/index.js
+
+      - name: Deploy primary playlist Worker without changing its URL
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          workingDirectory: default-playlist
+          command: deploy --config wrangler.toml
+
+      - name: Verify primary default playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://phuongnm7-playlist.phuongnm7-iptv.workers.dev/?nm7_cutover_check=$(date +%s)"
+          curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 60 "$URL" -o /tmp/nm7-default.m3u
+          grep -q '^#EXTM3U' /tmp/nm7-default.m3u
+          grep -q '^#EXTINF:' /tmp/nm7-default.m3u
+          grep -Fq 'group-title="🌟VTV & VTVCab🌟"' /tmp/nm7-default.m3u
+          CHANNELS="$(grep -c '^#EXTINF:' /tmp/nm7-default.m3u)"
+          test "$CHANNELS" -ge 10
+          echo "Primary playlist endpoint is valid; channels=$CHANNELS"
+
+      - name: Deploy web fallback playlist Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4"
+          workingDirectory: cloudflare/iptv-live-merge
+          command: deploy --config wrangler.toml
+
+      - name: Verify web fallback playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://iptv-live-merge.phuongnm7-iptv.workers.dev/playlist.m3u?nm7_cutover_check=$(date +%s)"
+          curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 60 "$URL" -o /tmp/nm7-web-fallback.m3u
+          grep -q '^#EXTM3U' /tmp/nm7-web-fallback.m3u
+          grep -q '^#EXTINF:' /tmp/nm7-web-fallback.m3u
+          CHANNELS="$(grep -c '^#EXTINF:' /tmp/nm7-web-fallback.m3u)"
+          test "$CHANNELS" -ge 10
+          echo "Web fallback playlist endpoint is valid; channels=$CHANNELS"
