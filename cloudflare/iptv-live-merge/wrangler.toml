@@ -1,0 +1,4 @@
+name = "iptv-live-merge"
+main = "src/index.js"
+compatibility_date = "2026-09-25"
+workers_dev = true

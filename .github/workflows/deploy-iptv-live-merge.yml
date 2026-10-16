@@ -1,0 +1,47 @@
+name: Deploy IPTV Live Merge Worker
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cloudflare/iptv-live-merge/**"
+      - ".github/workflows/deploy-iptv-live-merge.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-iptv-live-merge
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Validate Worker JavaScript
+        working-directory: cloudflare/iptv-live-merge
+        run: node --check src/index.js
+      - name: Deploy IPTV Live Merge Worker
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: cloudflare/iptv-live-merge
+          wranglerVersion: "4"
+          command: deploy --config wrangler.toml
+      - name: Verify served playlist
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://iptv-live-merge.phuongnm7-iptv.workers.dev/playlist.m3u"
+          curl -fsSL --retry 3 --retry-delay 2 --max-time 45 "$URL" -o /tmp/iptv-live-merge.m3u
+          grep -q '^#EXTM3U' /tmp/iptv-live-merge.m3u
+          grep -q '^#EXTINF:' /tmp/iptv-live-merge.m3u
+          echo "Playlist endpoint returned a valid M3U:"
+          echo "channels=$(grep -c '^#EXTINF:' /tmp/iptv-live-merge.m3u)"
