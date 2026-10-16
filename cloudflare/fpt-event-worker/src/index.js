@@ -1,3 +1,4 @@
+// Deployment cutover: source/status URLs now come from Dungntk9-owned GitHub repository.
 const GENERATED_PLAYLIST_URL =
   "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/fpt-event-live.m3u";
 const GENERATED_STATUS_URL =
