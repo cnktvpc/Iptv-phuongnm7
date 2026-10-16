@@ -100,7 +100,7 @@ export default {
     const groupOrder = [
       'VTV', 'VTVCab', 'Thể Thao', 'Quốc Tế', 'SCTV', 'HTV - TP.HCM', 'THVL',
       'Tin Tức', 'Phim Truyện', 'Thiếu Nhi', 'Khám Phá', 'Âm Nhạc',
-      'Sự Kiện', 'Sự Kiện FPT PLAY', 'Địa Phương', 'Miền Bắc', 'Miền Trung', 'Miền Nam',
+      'Sự Kiện', 'Sự Kiện FPT PLAY', 'Sự Kiện TV360', 'Địa Phương', 'Miền Bắc', 'Miền Trung', 'Miền Nam',
       'Radio Miền Bắc', 'Radio Miền Trung', 'Radio Miền Nam', 'Radio VOV', 'Radio VOH'
     ];
     const groupRank = new Map(groupOrder.map((group, index) => [group, index]));
