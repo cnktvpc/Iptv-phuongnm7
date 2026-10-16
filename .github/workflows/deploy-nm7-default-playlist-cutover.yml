@@ -54,7 +54,9 @@ jobs:
           curl -fsSL --retry 3 --retry-delay 2 --connect-timeout 10 --max-time 60 "$URL" -o /tmp/nm7-default.m3u
           grep -q '^#EXTM3U' /tmp/nm7-default.m3u
           grep -q '^#EXTINF:' /tmp/nm7-default.m3u
-          grep -Fq 'group-title="🌟VTV & VTVCab🌟"' /tmp/nm7-default.m3u
+          grep -Fq 'group-title="VTV"' /tmp/nm7-default.m3u
+          grep -Fq 'group-title="VTVCab"' /tmp/nm7-default.m3u
+          grep -Fq 'group-title="Thể Thao"' /tmp/nm7-default.m3u
           CHANNELS="$(grep -c '^#EXTINF:' /tmp/nm7-default.m3u)"
           test "$CHANNELS" -ge 10
           echo "Primary playlist endpoint is valid; channels=$CHANNELS"
