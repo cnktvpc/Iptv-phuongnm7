@@ -6,7 +6,7 @@ on:
       - '.github/workflows/discover-sports-web.yml'
       - 'tools/discover_sports_web.py'
   schedule:
-    - cron: '17 * * * *'
+    - cron: '17-17 * * * *'
   workflow_dispatch:
 
 permissions:
