@@ -241,7 +241,7 @@ The deployment workflow now performs one best-effort `/scan` after a successful 
 
 The CI source-only integrity test still requires every public playlist URL to be an exact URL from:
 
-`https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
+`https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
 
 and rejects old metadata/alternate-source markers.
 
@@ -270,7 +270,7 @@ and rejects old metadata/alternate-source markers.
 - Watchdog deploy workflow dùng lại `CLOUDFLARE_API_TOKEN` và `CLOUDFLARE_ACCOUNT_ID` hiện có.
 
 ### Secret cần có trên Cloudflare watchdog
-- `GITHUB_TOKEN`: GitHub fine-grained token có quyền Actions Read and write cho `phuongnm7/Iptv-phuongnm7`.
+- Watchdog không còn yêu cầu `GITHUB_TOKEN`; nó chỉ đọc trạng thái công khai. GitHub Actions scanner chạy theo lịch 5 phút và là bộ cập nhật chính.
 
 ### Commit
 - Scanner schedule/concurrency fix: `c92f5a96f5e7bade0ef63083c1f70eba18e34025`.

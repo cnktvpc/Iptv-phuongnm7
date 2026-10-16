@@ -4,9 +4,9 @@ Worker phục vụ playlist **SỰ KIỆN FPT** dựa trên đúng các URL tron
 
 ## Source duy nhất
 
-`https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
+`https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
 
-Source hiện có 46 URL duy nhất (38 HLS + 8 DASH).
+Số URL ứng viên được đọc trực tiếp từ source M3U ở mỗi lần quét; không cố định số lượng.
 
 Không sử dụng playlist/metadata event bên ngoài và không thay URL FPT sang hostname khác.
 
@@ -50,9 +50,7 @@ Worker **không probe trực tiếp FPT CDN và không có Cron Trigger**. Nó:
 
 ## Cron scanner
 
-Workflow đang chạy trong `.github/workflows/update-merged-iptv.yml`:
-- job merge cũ: hàng giờ;
-- job `scan-fpt-events`: mỗi 5 phút ở phút 5,10,15,...55.
+Workflow scanner chính: `.github/workflows/fpt-event-scan.yml`, lịch mỗi 5 phút. Playlist được xuất bản theo các URL có trong source M3U; watchdog chỉ theo dõi, không dùng PAT và không dispatch workflow.
 
 ## Endpoint
 
@@ -82,6 +80,6 @@ Generated playlist có marker:
 
 ## Cron ownership
 
-`nm7-fpt-event-live` phải giữ `triggers.crons = []`. Lịch `*/5 * * * *` chỉ thuộc `nm7-fpt-event-watchdog` và lịch scanner `.github/workflows/fpt-event-scan.yml`.
+`nm7-fpt-event-live` phải giữ `triggers.crons = []`. Lịch `*/5 * * * *` được giữ nguyên trên `nm7-fpt-event-watchdog`; lịch GitHub Actions scanner cũng chạy mỗi 5 phút. Watchdog không cần `GITHUB_TOKEN`.
 
 Workflow deploy của delivery Worker có bước reconcile trực tiếp Cloudflare Workers Scripts Schedules và xác nhận sau deploy rằng danh sách schedule vẫn rỗng.

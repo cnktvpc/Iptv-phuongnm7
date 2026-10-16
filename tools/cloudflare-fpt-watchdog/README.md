@@ -1,62 +1,30 @@
 # NM7 FPT Event Watchdog
 
-Watchdog độc lập cho GitHub Actions scanner của NM7 FPT Event Live.
+Watchdog chạy trên Cloudflare và giám sát trạng thái của GitHub Actions scanner NM7 FPT Event Live.
 
-## Ownership
+## Vai trò và lịch
 
-- GitHub Actions là scanner chính.
-- `nm7-fpt-event-live` là delivery Worker và không có Cron Trigger.
-- `nm7-fpt-event-watchdog` là Worker duy nhất chịu trách nhiệm watchdog Cron `*/5 * * * *`.
+- GitHub Actions `.github/workflows/fpt-event-scan.yml` là bộ cập nhật playlist chính, chạy mỗi 5 phút.
+- `nm7-fpt-event-live` là delivery Worker, không có Cron Trigger.
+- `nm7-fpt-event-watchdog` vẫn chạy Cron `*/5 * * * *` và kiểm tra run gần nhất cùng file `generated/fpt-event-live.status.json`.
+- Watchdog chỉ giám sát và ghi log. Nó không dispatch workflow, không cần Personal Access Token và không phụ thuộc tài khoản GitHub `phuongnm7`.
 
-## Watchdog policy
+## Endpoint
 
-- Mỗi 5 phút, watchdog đọc run mới nhất của `.github/workflows/fpt-event-scan.yml`.
-- Watchdog đồng thời đọc `generated/fpt-event-live.status.json` để kiểm tra độ mới của kết quả.
-- Nếu run còn đang hoạt động, watchdog không dispatch trùng.
-- Nếu run/kết quả đã stale quá 8 phút, hoặc output không còn hợp lệ (`candidates != 46`, `sourceOnly != true`), watchdog gọi `workflow_dispatch` trên `main`.
-- Kết quả watchdog ghi log `action=noop` hoặc `action=dispatch` cùng thông tin run/scan để chẩn đoán.
+- `/health`: trả trạng thái Worker, cron và `githubTokenRequired=false`.
+- `POST /run`: chạy một vòng kiểm tra và trả diagnostics.
 
-## GitHub API
+## Triển khai
 
-Worker cần secret `GITHUB_TOKEN` với quyền GitHub Actions Read and write trên `phuongnm7/Iptv-phuongnm7`. Secret này được quản lý trực tiếp trên Cloudflare Worker (Settings → Variables and Secrets); không lưu token trong repository.
-GitHub REST API dùng phiên bản `2026-03-10`.
+Workflow `.github/workflows/deploy-fpt-event-watchdog.yml` triển khai watchdog, xóa secret `GITHUB_TOKEN` cũ nếu còn tồn tại, rồi xác minh secret đã bị loại bỏ và Cron vẫn là `*/5 * * * *`.
 
-## Endpoints
+Cloudflare vẫn dùng tên miền workers.dev hiện có để không làm hỏng URL đang phục vụ. Việc dùng hostname Cloudflare cũ không khiến watchdog gọi API bằng tài khoản GitHub cũ.
 
-- `/health`: kiểm tra cấu hình cơ bản và việc đã bind secret.
-- `POST /run`: chạy một vòng watchdog thủ công; endpoint này dùng cùng logic kiểm tra và dispatch với Cron.
+## Kiểm tra
 
-## Cloudflare Cron
-
-Trigger phải nằm **chỉ** trên `nm7-fpt-event-watchdog`:
-
-`*/5 * * * *`
-
-`nm7-fpt-event-live` phải có `triggers.crons = []`; delivery Worker không export `scheduled()` vì không có nhiệm vụ chạy nền.
-
-## Deployment verification
-
-Workflow deploy watchdog kiểm tra:
+Workflow xác minh:
 - JavaScript syntax;
-- `/health` với `tokenConfigured=true`;
-- `POST /run` có thể đọc GitHub Actions và thực hiện `noop` hoặc `dispatch`;
-- scanner status có `candidates=46` và `source_only=true`.
-
-Không ghi token vào repository.
-
-
-## Troubleshooting triển khai
-
-Nếu workflow **Deploy NM7 FPT Event Watchdog** báo:
-
-`tokenConfigured=false`
-
-thì Worker đã deploy nhưng **Production secret `GITHUB_TOKEN` chưa được bind vào runtime**. Đặt secret tại:
-
-**Cloudflare → Workers & Pages → nm7-fpt-event-watchdog → Settings → Variables and Secrets → Production → Secret → GITHUB_TOKEN**
-
-Sau khi secret đã tồn tại trong **Production**, chạy lại workflow deploy. Bước `Verify watchdog health` phải trả `tokenConfigured=true`, sau đó bước `Verify GitHub dispatch path` phải trả `ok=true` và `action=noop` hoặc `action=dispatch`.
-
-Không dán token vào source code, README, workflow file hoặc chat.
-
+- `/health` trả `githubTokenRequired=false`;
+- `POST /run` trả `action=monitor` cùng dữ liệu scan source-only;
+- Cron Cloudflare vẫn chạy mỗi 5 phút.
 

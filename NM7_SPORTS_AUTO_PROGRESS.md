@@ -1,8 +1,8 @@
 # NM7 Sports Auto Playlist — Tiến độ đến 20/09/2026
 
 ## Trạng thái
-- Hệ thống playlist thể thao tự động đang chạy trên repo `phuongnm7/Iptv-phuongnm7`.
-- Link playlist giữ nguyên: `https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sports-auto.m3u`.
+- Hệ thống playlist thể thao tự động đang chạy trên repo `dungntk9/Iptv-phuongnm7`.
+- Link playlist giữ nguyên: `https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sports-auto.m3u`.
 - Workflow: `.github/workflows/update-sports-auto.yml`.
 - Chu kỳ cập nhật: 10 phút/lần.
 - Kiến trúc hiện tại: nguồn A → B → C → D → LAST_GOOD.
