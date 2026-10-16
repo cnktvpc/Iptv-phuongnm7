@@ -1,0 +1,56 @@
+name: Bootstrap TV365 Pages (one-time)
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tv365-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify playlist
+        run: |
+          test -s tv365.m3u
+          head -n 1 tv365.m3u | grep -q '^#EXTM3U'
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site
+          cp tv365.m3u _site/tv365.m3u
+          printf '%s\n' 'TV365 M3U playlist endpoint' > _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Remove one-time bootstrap after successful deployment
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/bootstrap-tv365-pages.yml
+          git commit -m "chore: remove one-time TV365 Pages bootstrap"
+          git push
