@@ -1,3 +1,4 @@
+// Deployment cutover: upstream playlist sources use the Dungntk9-owned repository.
 const SOURCES = [
   {
     url: 'https://raw.githubusercontent.com/dungntk9/Iptv/main/SuperOK_playlist.m3u',
