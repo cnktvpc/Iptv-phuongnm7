@@ -1,3 +1,4 @@
+// Migration: public GitHub read APIs only; no legacy GitHub token or dispatch.
 const REPO = "dungntk9/Iptv-phuongnm7";
 const WORKFLOW = "update-sports-auto.yml";
 const BRANCH = "main";

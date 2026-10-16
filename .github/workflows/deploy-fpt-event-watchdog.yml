@@ -1,4 +1,5 @@
 name: Deploy NM7 GitHub-independent Watchdogs
+# Dungntk9 cutover: verify no legacy GitHub PAT and preserve five-minute crons
 # Ownership cutover verification: 2026-10-16
 
 on:

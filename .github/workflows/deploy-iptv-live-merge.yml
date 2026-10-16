@@ -1,4 +1,5 @@
 name: Deploy IPTV Live Merge Worker
+# Dungntk9 cutover: verify the merged playlist uses new repository sources
 
 on:
   push:

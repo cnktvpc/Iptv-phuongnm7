@@ -1,4 +1,5 @@
 name: Deploy NM7 FPT Event Worker
+# Dungntk9 ownership cutover: verify migrated raw source URLs on deployment
 
 on:
   push:
