@@ -12,7 +12,7 @@ const SOURCES = [
     groups: new Set(['Giờ Vàng TV', 'Gà Vàng 33 TV', 'Xôi Lạc Z TV', 'Gà Vàng TV'])
   },
   {
-    url: 'https://tinyurl.com/phuongnm7',
+    url: 'https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/VIP-307.m3u',
     groups: new Set([
       'VIP | 4K ULTRA HD',
       'VIP | PREMIER LEAGUE',
@@ -26,7 +26,7 @@ const SOURCES = [
 
 function groupOf(extinf) {
   const m = extinf.match(/group-title="([^"]*)"/i);
-  return m ? m[1].trim() : '';
+  return m ? m[1].replace(/\\u00a0/g, ' ').trim() : '';
 }
 
 function entries(text) {
