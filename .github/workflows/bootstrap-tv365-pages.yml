@@ -1,6 +1,10 @@
 name: Bootstrap TV365 Pages (one-time)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/bootstrap-tv365-pages.yml
   schedule:
     - cron: '*/5 * * * *'
   workflow_dispatch:
