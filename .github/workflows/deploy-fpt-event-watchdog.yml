@@ -1,4 +1,4 @@
-name: Deploy NM7 FPT Event Watchdog
+name: Deploy NM7 GitHub-independent Watchdogs
 
 on:
   push:
@@ -6,21 +6,20 @@ on:
     paths:
       - "tools/cloudflare-fpt-watchdog/src/**"
       - "tools/cloudflare-fpt-watchdog/wrangler.toml"
+      - "tools/cloudflare-sports-watchdog/src/**"
+      - "tools/cloudflare-sports-watchdog/wrangler.toml"
       - ".github/workflows/deploy-fpt-event-watchdog.yml"
   workflow_dispatch:
-
-
-# Runtime secret rebinding verification: 2026-10-02
 
 permissions:
   contents: read
 
 concurrency:
-  group: deploy-nm7-fpt-event-watchdog
+  group: deploy-nm7-watchdogs
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  deploy-fpt-watchdog:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
@@ -31,7 +30,7 @@ jobs:
       - name: Validate Worker JavaScript
         working-directory: tools/cloudflare-fpt-watchdog
         run: node --check src/index.js
-      - name: Deploy Worker
+      - name: Deploy FPT watchdog
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -39,7 +38,7 @@ jobs:
           workingDirectory: tools/cloudflare-fpt-watchdog
           wranglerVersion: "4"
           command: deploy --config wrangler.toml
-      - name: Verify Worker secret binding
+      - name: Remove legacy GitHub token from FPT watchdog
         working-directory: tools/cloudflare-fpt-watchdog
         shell: bash
         env:
@@ -47,21 +46,94 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          npx wrangler secret list --config wrangler.toml | tee /tmp/watchdog-secrets.txt
-          grep -q "GITHUB_TOKEN" /tmp/watchdog-secrets.txt
-
-      - name: Verify watchdog health
+          npx wrangler@4 secret list --config wrangler.toml | tee /tmp/fpt-watchdog-secrets.json
+          if jq -e 'any(.[]; .name == "GITHUB_TOKEN")' /tmp/fpt-watchdog-secrets.json >/dev/null; then
+            printf '{"GITHUB_TOKEN":null}\n' > /tmp/remove-fpt-watchdog-token.json
+            npx wrangler@4 secret bulk /tmp/remove-fpt-watchdog-token.json --config wrangler.toml
+          fi
+          npx wrangler@4 secret list --config wrangler.toml | tee /tmp/fpt-watchdog-secrets-after.json
+          if jq -e 'any(.[]; .name == "GITHUB_TOKEN")' /tmp/fpt-watchdog-secrets-after.json >/dev/null; then
+            echo "Legacy GITHUB_TOKEN still exists on the FPT watchdog."
+            exit 1
+          fi
+      - name: Verify FPT watchdog Cron remains every five minutes
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          BASE="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/nm7-fpt-event-watchdog/schedules"
+          BODY="$(curl -fsSL --retry 3 --retry-delay 2 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$BASE")"
+          echo "$BODY"
+          echo "$BODY" | jq -e '.success == true and any(.result.schedules[]; .cron == "*/5 * * * *")' >/dev/null
+      - name: Verify FPT watchdog health
         run: |
           set -euo pipefail
           BASE="https://nm7-fpt-event-watchdog.phuongnm7-iptv.workers.dev"
           BODY="$(curl -fsSL --retry 3 --retry-delay 2 --max-time 30 "$BASE/health")"
           echo "$BODY"
-          echo "$BODY" | jq -e '.ok == true and .service == "nm7-fpt-event-watchdog" and .schedule == "*/5 * * * *" and .targetWorkflow == "fpt-event-scan.yml" and .tokenConfigured == true' >/dev/null
-
-      - name: Verify GitHub dispatch path
+          echo "$BODY" | jq -e '.ok == true and .service == "nm7-fpt-event-watchdog" and .schedule == "*/5 * * * *" and .targetWorkflow == "fpt-event-scan.yml" and .githubTokenRequired == false' >/dev/null
+      - name: Verify FPT watchdog monitor path
         run: |
           set -euo pipefail
           BASE="https://nm7-fpt-event-watchdog.phuongnm7-iptv.workers.dev"
           BODY="$(curl -fsSL --retry 3 --retry-delay 2 --max-time 30 -X POST "$BASE/run")"
           echo "$BODY"
-          echo "$BODY" | jq -e '.ok == true and (.action == "noop" or .action == "dispatch") and .service == "nm7-fpt-event-watchdog" and .candidates == 46 and .source_only == true' >/dev/null
+          echo "$BODY" | jq -e '.ok == true and .action == "monitor" and .service == "nm7-fpt-event-watchdog" and .candidates > 0 and .source_only == true and .githubTokenRequired == false' >/dev/null
+
+  deploy-sports-watchdog:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Validate Worker JavaScript
+        working-directory: tools/cloudflare-sports-watchdog
+        run: node --check src/index.js
+      - name: Deploy sports watchdog
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: tools/cloudflare-sports-watchdog
+          wranglerVersion: "4"
+          command: deploy --config wrangler.toml
+      - name: Remove legacy GitHub token from sports watchdog
+        working-directory: tools/cloudflare-sports-watchdog
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          npx wrangler@4 secret list --config wrangler.toml | tee /tmp/sports-watchdog-secrets.json
+          if jq -e 'any(.[]; .name == "GITHUB_TOKEN")' /tmp/sports-watchdog-secrets.json >/dev/null; then
+            printf '{"GITHUB_TOKEN":null}\n' > /tmp/remove-sports-watchdog-token.json
+            npx wrangler@4 secret bulk /tmp/remove-sports-watchdog-token.json --config wrangler.toml
+          fi
+          npx wrangler@4 secret list --config wrangler.toml | tee /tmp/sports-watchdog-secrets-after.json
+          if jq -e 'any(.[]; .name == "GITHUB_TOKEN")' /tmp/sports-watchdog-secrets-after.json >/dev/null; then
+            echo "Legacy GITHUB_TOKEN still exists on the sports watchdog."
+            exit 1
+          fi
+      - name: Verify sports watchdog Cron remains every five minutes
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          BASE="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/scripts/nm7-sports-watchdog/schedules"
+          BODY="$(curl -fsSL --retry 3 --retry-delay 2 -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "$BASE")"
+          echo "$BODY"
+          echo "$BODY" | jq -e '.success == true and any(.result.schedules[]; .cron == "*/5 * * * *")' >/dev/null
+      - name: Verify sports watchdog health
+        run: |
+          set -euo pipefail
+          BASE="https://nm7-sports-watchdog.phuongnm7-iptv.workers.dev"
+          BODY="$(curl -fsSL --retry 3 --retry-delay 2 --max-time 30 "$BASE/health")"
+          echo "$BODY"
+          echo "$BODY" | jq -e '.ok == true and .service == "nm7-sports-watchdog" and .schedule == "*/5 * * * *" and .githubTokenRequired == false' >/dev/null

@@ -6,7 +6,7 @@ const TV_SOURCE_URL = "https://tinyurl.com/vmt47";
 const FPT_EVENT_SOURCE_URL = "https://tinyurl.com/tivinm7";
 // Preserve the existing sports playlist URL exactly; only select the five configured groups.
 const SPORTS_URL =
-  "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/sports-auto.m3u?utm_source=chatgpt.com";
+  "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sports-auto.m3u?utm_source=chatgpt.com";
 const MAIN_GROUPS = [
   "HTV",
   "HTVC",

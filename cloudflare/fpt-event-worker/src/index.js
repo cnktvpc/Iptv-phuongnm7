@@ -1,7 +1,7 @@
 const GENERATED_PLAYLIST_URL =
-  "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/generated/fpt-event-live.m3u";
+  "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/fpt-event-live.m3u";
 const GENERATED_STATUS_URL =
-  "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
+  "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
 
 const WORKER_VERSION = "fpt-event-delivery-v15";
 

@@ -1,5 +1,5 @@
 const PLAYLIST_URL =
-  "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/generated/vietmitv-merge.m3u";
+  "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/vietmitv-merge.m3u";
 const WORKER_VERSION = "nm7-vietmitv-merge-v1";
 
 function baseHeaders(extra = {}) {

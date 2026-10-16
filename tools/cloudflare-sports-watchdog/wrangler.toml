@@ -3,8 +3,7 @@ main = "src/index.js"
 compatibility_date = "2026-09-25"
 workers_dev = true
 
+# The watchdog uses unauthenticated, read-only GitHub endpoints and never dispatches workflows.
+
 [triggers]
 crons = ["*/5 * * * *"]
-
-[secrets]
-required = ["GITHUB_TOKEN"]

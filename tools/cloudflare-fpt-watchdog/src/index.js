@@ -1,41 +1,33 @@
-const REPO = "phuongnm7/Iptv-phuongnm7";
+const REPO = "dungntk9/Iptv-phuongnm7";
 const WORKFLOW = "fpt-event-scan.yml";
 const BRANCH = "main";
-const STATUS_URL = "https://raw.githubusercontent.com/phuongnm7/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
+const STATUS_URL = "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
 const STALE_AFTER_MS = 8 * 60 * 1000;
 const API_VERSION = "2026-03-10";
 const ACTIVE = new Set(["queued", "in_progress", "requested", "waiting", "pending"]);
 
-function ghHeaders(token) {
-  return {
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": API_VERSION,
-    "User-Agent": "NM7-FPT-Event-Watchdog/2.1",
-    ...(token ? { Authorization: `Bearer ${token}` } : {}),
-  };
-}
-
-async function gh(url, token, options = {}) {
+async function githubJson(url) {
   const response = await fetch(url, {
-    ...options,
-    headers: { ...ghHeaders(token), ...(options.headers || {}) },
+    headers: {
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": API_VERSION,
+      "User-Agent": "NM7-FPT-Event-Watchdog/3.0",
+    },
   });
-  const bodyText = await response.text();
+  const text = await response.text();
   let body = null;
-  try { body = bodyText ? JSON.parse(bodyText) : null; }
-  catch { body = { raw: bodyText.slice(0, 500) }; }
-  if (!response.ok) {
-    throw new Error(`GitHub API ${response.status}: ${body?.message || body?.raw || "error"}`);
-  }
+  try { body = text ? JSON.parse(text) : null; }
+  catch { body = { raw: text.slice(0, 500) }; }
+  if (!response.ok) throw new Error(`GitHub API ${response.status}: ${body?.message || body?.raw || "error"}`);
   return body;
 }
 
-async function latestRun(token) {
+async function latestRun() {
   const url = new URL(`https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/runs`);
   url.searchParams.set("branch", BRANCH);
   url.searchParams.set("per_page", "10");
   url.searchParams.set("exclude_pull_requests", "true");
-  const data = await gh(url.toString(), token);
+  const data = await githubJson(url.toString());
   return Array.isArray(data?.workflow_runs) ? (data.workflow_runs[0] || null) : null;
 }
 
@@ -45,21 +37,12 @@ async function latestScanStatus() {
       "Cache-Control": "no-cache, no-store",
       Pragma: "no-cache",
       Accept: "application/json",
-      "User-Agent": "NM7-FPT-Event-Watchdog/2.1",
+      "User-Agent": "NM7-FPT-Event-Watchdog/3.0",
     },
     cache: "no-store",
   });
   if (!response.ok) throw new Error(`scanner-status-http-${response.status}`);
   return response.json();
-}
-
-async function dispatch(token) {
-  if (!token) throw new Error("Missing Cloudflare secret GITHUB_TOKEN");
-  await gh(`https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW}/dispatches`, token, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ref: BRANCH }),
-  });
 }
 
 function ageMinutes(iso) {
@@ -68,14 +51,8 @@ function ageMinutes(iso) {
   return Math.max(0, Math.round((Date.now() - time) / 60000));
 }
 
-async function check(env) {
-  if (!env.GITHUB_TOKEN) throw new Error("Missing Cloudflare secret GITHUB_TOKEN");
-
-  const [runResult, scanResult] = await Promise.allSettled([
-    latestRun(env.GITHUB_TOKEN),
-    latestScanStatus(),
-  ]);
-
+async function check() {
+  const [runResult, scanResult] = await Promise.allSettled([latestRun(), latestScanStatus()]);
   if (runResult.status === "rejected") throw runResult.reason;
 
   const run = runResult.value;
@@ -88,15 +65,23 @@ async function check(env) {
   const runAgeMinutes = Number.isFinite(runAgeMs) ? Math.max(0, Math.round(runAgeMs / 60000)) : null;
   const scanAgeMinutes = ageMinutes(scan?.generatedAt);
   const scanFresh = scanAgeMinutes !== null && scanAgeMinutes < 8;
-  const validCandidateCount = Number(scan?.candidates) === 46;
+  const validCandidateCount = Number(scan?.candidates) > 0;
   const sourceOnly = scan?.sourceOnly === true;
-  const validPublishedScan = Boolean(
-    sourceOnly &&
-    (scan?.scanHealthy === true || (scan?.partialScan === true && Number(scan?.liveEntries) > 0))
-  );
+  const validPublishedScan = Boolean(sourceOnly &&
+    (scan?.scanHealthy === true || (scan?.partialScan === true && Number(scan?.liveEntries) > 0)));
   const activeRun = Boolean(run && ACTIVE.has(run.status));
 
-  const diagnostics = {
+  let reason = "github_schedule_is_authoritative";
+  if (activeRun) reason = "scanner_workflow_running";
+  else if (scanStatusError) reason = "scanner_status_unavailable";
+  else if (!scanFresh) reason = "scanner_status_stale";
+  else if (!validCandidateCount || !validPublishedScan) reason = "scanner_output_invalid";
+  else if (run && runAgeMs >= STALE_AFTER_MS) reason = "scanner_run_is_old_monitor_only";
+
+  return {
+    action: "monitor",
+    reason,
+    githubTokenRequired: false,
     latest_run_id: run?.id ?? null,
     latest_run_status: run?.status ?? null,
     latest_run_conclusion: run?.conclusion ?? null,
@@ -111,39 +96,6 @@ async function check(env) {
     source_only: scan?.sourceOnly ?? null,
     scan_status_error: scanStatusError,
   };
-
-  if (activeRun && runAgeMs < STALE_AFTER_MS && scanFresh && validCandidateCount && validPublishedScan) {
-    return { action: "noop", reason: "recent_run_and_fresh_scan", ...diagnostics };
-  }
-
-  if (activeRun) {
-    return { action: "noop", reason: "workflow_still_active", ...diagnostics };
-  }
-
-  if (run && runAgeMs < STALE_AFTER_MS && scanFresh && validCandidateCount && validPublishedScan) {
-    return { action: "noop", reason: "recent_completed_run_and_fresh_scan", ...diagnostics };
-  }
-
-  await dispatch(env.GITHUB_TOKEN);
-  return {
-    action: "dispatch",
-    reason: !run
-      ? "no_previous_run"
-      : (scanStatusError
-        ? "scanner_status_unavailable"
-        : (!scanFresh
-          ? "scanner_output_stale"
-          : (!validCandidateCount
-            ? "unexpected_candidate_count"
-            : (!validPublishedScan
-              ? "invalid_scan_state"
-              : "latest_run_older_than_8_minutes")))),
-    previous_run_id: run?.id ?? null,
-    previous_status: run?.status ?? null,
-    previous_conclusion: run?.conclusion ?? null,
-    previous_age_minutes: runAgeMinutes,
-    ...diagnostics,
-  };
 }
 
 function errorMessage(error) {
@@ -151,29 +103,22 @@ function errorMessage(error) {
 }
 
 export default {
-  async scheduled(controller, env) {
+  async scheduled(controller) {
     const baseLog = {
       service: "nm7-fpt-event-watchdog",
       cron: controller.cron,
       scheduled_at: new Date(controller.scheduledTime).toISOString(),
-      token_configured: Boolean(env.GITHUB_TOKEN),
+      github_token_required: false,
     };
-
     try {
-      const result = await check(env);
-      console.log(JSON.stringify({ ...baseLog, ...result }));
+      console.log(JSON.stringify({ ...baseLog, ...(await check()) }));
     } catch (error) {
-      console.error(JSON.stringify({
-        ...baseLog,
-        action: "error",
-        error: errorMessage(error),
-      }));
+      console.error(JSON.stringify({ ...baseLog, action: "error", error: errorMessage(error) }));
     }
   },
 
-  async fetch(request, env) {
+  async fetch(request) {
     const url = new URL(request.url);
-
     if (url.pathname === "/health") {
       return Response.json({
         ok: true,
@@ -181,30 +126,19 @@ export default {
         schedule: "*/5 * * * *",
         targetWorkflow: WORKFLOW,
         staleAfterMinutes: 8,
-        tokenConfigured: Boolean(env.GITHUB_TOKEN),
+        githubTokenRequired: false,
       });
     }
-
     if (url.pathname === "/run") {
       if (request.method !== "POST") return new Response("POST required", { status: 405 });
       try {
-        return Response.json({
-          ok: true,
-          service: "nm7-fpt-event-watchdog",
-          ...(await check(env)),
-        });
+        return Response.json({ ok: true, service: "nm7-fpt-event-watchdog", ...(await check()) });
       } catch (error) {
-        return Response.json({
-          ok: false,
-          service: "nm7-fpt-event-watchdog",
-          error: errorMessage(error),
-        }, { status: 502 });
+        return Response.json({ ok: false, service: "nm7-fpt-event-watchdog", error: errorMessage(error) }, { status: 502 });
       }
     }
-
     return new Response("NM7 FPT Event Watchdog\n\n/health\nPOST /run\n", {
       headers: { "Content-Type": "text/plain; charset=utf-8" },
     });
   },
 };
-

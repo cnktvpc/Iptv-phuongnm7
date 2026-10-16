@@ -3,7 +3,7 @@ main = "src/index.js"
 compatibility_date = "2026-09-25"
 workers_dev = true
 
-# Production secret GITHUB_TOKEN is managed in Cloudflare Worker settings.
+# Public GitHub REST and status endpoints are read-only; no personal access token is required.
 
 [triggers]
 crons = ["*/5 * * * *"]
