@@ -2,15 +2,26 @@
 const SOURCES = [
   {
     url: 'https://raw.githubusercontent.com/dungntk9/Iptv/main/SuperOK_playlist.m3u',
-    groups: new Set(['VTV', 'VTVcab', 'SCTV', 'HTV', 'Sự Kiện FPT PLAY', 'Thiết yếu', '🇸🇬 Mediacorp', '🌟SPORTS VIP🌟'])
+    groups: new Set([
+      'VTV', 'VTVcab', 'SCTV', 'HTV', 'HTVC', 'Quốc Tế', 'Thiết yếu',
+      '🌟VTV & VTVCab🌟', '🌟SCTV🌟', '🌟HTV🌟', '🌟Kênh Quốc Tế🌟',
+      '🌟Địa Phương🌟', '🌟Hoạt Hình🌟', '🌟VIP MOVIE🌟',
+      '🌟SPORTS VIP🌟', '🌟SPORTS XTREAM🌟', '⚽ LIVE SPORTS', 'UK SPORTS', 'UK sport',
+      'Sự Kiện FPT PLAY', '🇸🇬 Mediacorp'
+    ])
   },
   {
     url: 'https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/vmttv',
     groups: new Set(['Sự Kiện TV360'])
   },
   {
-    url: 'https://tinyurl.com/ttthethao2',
-    groups: new Set(['Giờ Vàng TV', 'Gà Vàng 33 TV', 'Xôi Lạc Z TV', 'Gà Vàng TV'])
+    url: 'https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sports-auto.m3u',
+    groups: new Set([
+      'Giờ Vàng TV', 'Gà Vàng 33 TV', 'Xôi Lạc Z TV', 'Gà Vàng TV',
+      'Vua Sân Cỏ TV', 'Khán Đài TV', 'Cola TV', 'Gà Vàng 24h TV',
+      'S8 TV', 'Sao Kê TV', 'Bia Ôm TV', 'Chuối Chiên TV',
+      'Sút Bóng TV', 'Phá Làng TV', 'Xôi Gấc TV', 'Socolive TV'
+    ])
   },
   {
     url: 'https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/VIP-307.m3u',
@@ -27,7 +38,7 @@ const SOURCES = [
 
 function groupOf(extinf) {
   const m = extinf.match(/group-title="([^"]*)"/i);
-  return m ? m[1].replace(/\\u00a0/g, ' ').trim() : '';
+  return m ? m[1].replace(/\u00a0/g, ' ').replace(/\\u00a0/g, ' ').trim() : '';
 }
 
 function entries(text) {
