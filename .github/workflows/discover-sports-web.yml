@@ -30,13 +30,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
-          key: playwright-chromium-${{ runner.os }}-v1
+          key: playwright-chromium-${{ runner.os }}-v1.64.0
           restore-keys: |
             playwright-chromium-${{ runner.os }}-
 
       - name: Install Playwright
         run: |
-          python3 -m pip install --disable-pip-version-check playwright
+          python3 -m pip install --disable-pip-version-check playwright==1.64.0
           if [ "${{ steps.pw-cache.outputs.cache-hit }}" != "true" ]; then
             python3 -m playwright install chromium
           fi
