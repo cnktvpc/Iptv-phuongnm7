@@ -7,9 +7,6 @@ on:
       - "cloudflare/iptv-live-merge/**"
       - ".github/workflows/deploy-nm7-default-playlist-cutover.yml"
   workflow_dispatch:
-  # Temporary one-time bootstrap window; remove as soon as a run is queued.
-  schedule:
-    - cron: "45-59 4 16 10 *"
 
 permissions:
   contents: read
