@@ -2,6 +2,7 @@ name: Build TV365 playlist
 
 on:
   push:
+    branches: [main]
     paths:
       - tv365-source.gz.b64
       - .github/workflows/build-tv365.yml
@@ -9,10 +10,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: tv365-pages
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,3 +43,26 @@ jobs:
             git commit -m "Build TV365 dynamic playlist"
             git push
           fi
+
+      - name: Verify generated M3U
+        run: |
+          test -s tv365.m3u
+          head -n 1 tv365.m3u | grep -q '^#EXTM3U'
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site
+          cp tv365.m3u _site/tv365.m3u
+          printf '%s\n' 'TV365 M3U playlist endpoint' > _site/index.html
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
