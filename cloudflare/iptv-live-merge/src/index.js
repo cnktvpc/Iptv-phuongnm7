@@ -121,7 +121,7 @@ export default {
     }
 
     const output = [
-      '#EXTM3U x-tvg-url=""',
+      '#EXTM3U',
       '#PLAYLIST: NM7 - Dynamic Selected IPTV',
       '# Generated on every request from configured source playlists.'
     ];
