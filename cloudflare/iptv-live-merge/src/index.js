@@ -1,3 +1,4 @@
+// Trigger default playlist deployment from GitHub web editor.
 // Trigger production Worker redeploy via an explicit main-branch merge; runtime behavior unchanged.
 // Deployment cutover: upstream playlist sources use the Dungntk9-owned repository.
 const SOURCES = [
