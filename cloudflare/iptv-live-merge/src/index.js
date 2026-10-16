@@ -1,14 +1,17 @@
 // Deployment cutover: upstream playlist sources use the Dungntk9-owned repository.
 const SOURCES = [
   {
-    url: 'https://raw.githubusercontent.com/dungntk9/Iptv/main/SuperOK_playlist.m3u',
+    url: 'https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/vapptv-live.m3u',
     groups: new Set([
-      'VTV', 'VTVcab', 'SCTV', 'HTV', 'HTVC', 'Quốc Tế', 'Thiết yếu',
-      '🌟VTV & VTVCab🌟', '🌟SCTV🌟', '🌟HTV🌟', '🌟Kênh Quốc Tế🌟',
-      '🌟Địa Phương🌟', '🌟Hoạt Hình🌟', '🌟VIP MOVIE🌟',
-      '🌟SPORTS VIP🌟', '🌟SPORTS XTREAM🌟', '⚽ LIVE SPORTS', 'UK SPORTS', 'UK sport',
-      'Sự Kiện FPT PLAY', '🇸🇬 Mediacorp'
+      'Thể Thao', 'Phim Truyện', 'Thiếu Nhi', 'Âm Nhạc', 'Khám Phá', 'Tin Tức',
+      'VTV', 'VTVCab', 'SCTV', 'HTV - TP.HCM', 'THVL', 'Quốc Tế', 'Sự Kiện',
+      'Địa Phương', 'Miền Trung', 'Miền Nam', 'Miền Bắc',
+      'Radio Miền Trung', 'Radio Miền Bắc', 'Radio VOV', 'Radio VOH', 'Radio Miền Nam'
     ])
+  },
+  {
+    url: 'https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/IPTV_Gop_VMTTV_vAppTV.m3u',
+    groups: new Set(['Sự Kiện FPT PLAY'])
   },
   {
     url: 'https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/vmttv',
@@ -92,6 +95,20 @@ export default {
         errors.push(`${source.url}: ${error.message}`);
       }
     }
+
+    // Preserve the established order of default NM7 TV groups.
+    const groupOrder = [
+      'VTV', 'VTVCab', 'Thể Thao', 'Quốc Tế', 'SCTV', 'HTV - TP.HCM', 'THVL',
+      'Tin Tức', 'Phim Truyện', 'Thiếu Nhi', 'Khám Phá', 'Âm Nhạc',
+      'Sự Kiện', 'Sự Kiện FPT PLAY', 'Địa Phương', 'Miền Bắc', 'Miền Trung', 'Miền Nam',
+      'Radio Miền Bắc', 'Radio Miền Trung', 'Radio Miền Nam', 'Radio VOV', 'Radio VOH'
+    ];
+    const groupRank = new Map(groupOrder.map((group, index) => [group, index]));
+    selected.sort((a, b) => {
+      const rankA = groupRank.get(groupOf(a[0])) ?? groupOrder.length;
+      const rankB = groupRank.get(groupOf(b[0])) ?? groupOrder.length;
+      return rankA - rankB;
+    });
 
     if (!selected.length) {
       return new Response('No matching channels were found. ' + errors.join(' | '), {
