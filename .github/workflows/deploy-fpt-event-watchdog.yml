@@ -1,4 +1,5 @@
 name: Deploy NM7 GitHub-independent Watchdogs
+# Ownership cutover verification: 2026-10-16
 
 on:
   push:
