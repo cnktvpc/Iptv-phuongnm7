@@ -5,7 +5,55 @@ const GENERATED_PLAYLIST_URL =
 const GENERATED_STATUS_URL =
   "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
 
-const WORKER_VERSION = "fpt-event-delivery-v16";
+const WORKER_VERSION = "fpt-event-delivery-v17";
+
+function isTestEntryName(name) {
+  return /\\btest\\b/i.test(String(name || ""));
+}
+
+function filterTestEntriesFromPlaylist(playlist) {
+  const lines = playlist.split(/\\r?\\n/);
+  const output = [];
+  let entry = [];
+
+  function flushEntry() {
+    if (!entry.length) return;
+    const extinf = entry.find((line) => line.startsWith("#EXTINF:"));
+    const title = extinf ? extinf.split(",").slice(1).join(",").trim() : "";
+    if (!isTestEntryName(title)) output.push(...entry);
+    entry = [];
+  }
+
+  for (const line of lines) {
+    if (line.startsWith("#EXTINF:")) {
+      flushEntry();
+      entry.push(line);
+    } else if (entry.length) {
+      entry.push(line);
+      if (/^https?:\\/\\//i.test(line.trim())) flushEntry();
+    } else {
+      output.push(line);
+    }
+  }
+  flushEntry();
+  return output.join("\\n").replace(/\\n*$/, "\\n");
+}
+
+function filterTestEntriesFromStatus(status) {
+  const allChannels = Array.isArray(status.liveChannels) ? status.liveChannels : [];
+  const liveChannels = allChannels.filter((channel) => !isTestEntryName(channel.name));
+  const removed = allChannels.length - liveChannels.length;
+  return {
+    ...status,
+    liveDetectedEntries: Number.isFinite(status.liveDetectedEntries)
+      ? status.liveDetectedEntries
+      : allChannels.length,
+    liveEntries: liveChannels.length,
+    filteredOutEntries: Math.max(Number(status.filteredOutEntries) || 0, removed),
+    filterPolicy: status.filterPolicy || "delivery guard: exclude entries explicitly marked TEST",
+    liveChannels,
+  };
+}
 
 async function fetchGitHub(url) {
   return fetch(`${url}?_=${Date.now()}`, {
@@ -37,12 +85,12 @@ async function getPlaylist() {
     throw new Error(`generated-playlist-http-${response.status}`);
   }
 
-  const text = await response.text();
-  if (!/^#EXTM3U/m.test(text)) {
+  const rawText = await response.text();
+  if (!/^#EXTM3U/m.test(rawText)) {
     throw new Error("generated-playlist-is-not-m3u");
   }
 
-  return text;
+  return filterTestEntriesFromPlaylist(rawText);
 }
 
 async function getStatus() {
@@ -50,7 +98,7 @@ async function getStatus() {
   if (!response.ok) {
     throw new Error(`generated-status-http-${response.status}`);
   }
-  return response.json();
+  return filterTestEntriesFromStatus(await response.json());
 }
 
 export default {
