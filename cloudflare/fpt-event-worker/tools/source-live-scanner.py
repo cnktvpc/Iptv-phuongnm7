@@ -6,6 +6,7 @@
 import concurrent.futures
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -312,10 +313,18 @@ def scan_all(candidates, proxies):
     results.sort(key=lambda x: order.get(x["url"], 999999))
     return results, details
 
+def is_publishable_live(row):
+    """Exclude explicitly marked test fixtures from the public event playlist."""
+    if not row.get("live"):
+        return False
+    name = str(row.get("name", "")).strip()
+    return re.search(r"\btest\b", name, flags=re.IGNORECASE) is None
+
+
 def build_m3u(results):
     lines = ["#EXTM3U", "#NM7-SCAN-VERIFIED: true", "#NM7-SCAN-MODE: vietnam-transport-source-only"]
     for row in results:
-        if not row["live"]:
+        if not is_publishable_live(row):
             continue
         lines.append(f'#EXTINF:-1 group-title="SỰ KIỆN FPT",{row["name"]}')
         lines.append(row["url"])
@@ -359,7 +368,9 @@ def main():
                 results[idx] = replacement
                 transports[row["url"]] = retry_transports.get(row["url"])
 
-    live = [x for x in results if x["live"]]
+    detected_live = [x for x in results if x["live"]]
+    live = [x for x in detected_live if is_publishable_live(x)]
+    filtered_out = [x for x in detected_live if not is_publishable_live(x)]
     errors = [x for x in results if x["error"]]
     all_403 = len(results) > 0 and all(x["status"] == 403 for x in results)
 
@@ -371,6 +382,9 @@ def main():
         "sourceOnly": True,
         "candidates": len(candidates),
         "liveEntries": len(live),
+        "liveDetectedEntries": len(detected_live),
+        "filteredOutEntries": len(filtered_out),
+        "filterPolicy": "verified-live-only; exclude names explicitly marked TEST",
         "inactiveEntries": len([x for x in results if not x["live"] and not x["error"]]),
         "probeErrors": len(errors),
         "allProbeErrorsAre403": all_403,
@@ -411,6 +425,7 @@ def main():
         "proxyUsed": any(v for v in transports.values()),
         "liveChannels": status["liveChannels"],
         "allProbeErrorsAre403": all_403,
+        "filteredOutEntries": len(filtered_out),
         "publishedCurrentScan": can_publish,
     }, ensure_ascii=False))
 
