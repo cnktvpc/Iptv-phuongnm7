@@ -40,7 +40,7 @@ Nếu một số URL 403 nhưng một hoặc nhiều URL khác đã xác minh li
 
 ## Delivery Worker
 
-Worker production: `fpt-event-delivery-v16`.
+Worker production: `fpt-event-delivery-v17`.
 
 Worker **không probe trực tiếp FPT CDN và không có Cron Trigger**. Nó:
 1. lấy file `generated/fpt-event-live.m3u`;
