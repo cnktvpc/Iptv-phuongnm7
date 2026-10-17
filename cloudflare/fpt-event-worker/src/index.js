@@ -8,11 +8,11 @@ const GENERATED_STATUS_URL =
 const WORKER_VERSION = "fpt-event-delivery-v17";
 
 function isTestEntryName(name) {
-  return /\\btest\\b/i.test(String(name || ""));
+  return /\btest\b/i.test(String(name || ""));
 }
 
 function filterTestEntriesFromPlaylist(playlist) {
-  const lines = playlist.split(/\\r?\\n/);
+  const lines = playlist.split(/\r?\n/);
   const output = [];
   let entry = [];
 
@@ -30,13 +30,13 @@ function filterTestEntriesFromPlaylist(playlist) {
       entry.push(line);
     } else if (entry.length) {
       entry.push(line);
-      if (/^https?:\\/\\//i.test(line.trim())) flushEntry();
+      if (/^https?:\/\//i.test(line.trim())) flushEntry();
     } else {
       output.push(line);
     }
   }
   flushEntry();
-  return output.join("\\n").replace(/\\n*$/, "\\n");
+  return output.join("\n").replace(/\n*$/, "\n");
 }
 
 function filterTestEntriesFromStatus(status) {
