@@ -11,7 +11,7 @@ https://cdn-global.ebaclofen.org/vsc/vsc-hiep-si-tan/index.m3u8
 https://cdn1-global.ebaclofen.org/live/pro3/index.m3u8
 #EXTINF:-1 tvg-logo="https://global-cdn.cdnx.tech/football/team/018e260ad68bdad741c61e3171c4c608.png" group-title="Vua Sân Cỏ TV" , 🟢 23:30 17/10 ⚽ Real Betis vs FC Barcelona (Lê Lợi)
 https://cdn-global.ebaclofen.org/vsc/jonhny5/index.m3u8
-#EXTINF:-1 tvg-logo="https://global-cdn.cdnx.tech/football/team/f2e98454cf2fc81dea92c1401521eac1.png" group-title="Vua Sân Cỏ TV" , 01:00 18/10 ⚽ SC Telstar vs Feyenoord (Tôn Quyền)
+#EXTINF:-1 tvg-logo="https://global-cdn.cdnx.tech/football/team/f2e98454cf2fc81dea92c1401521eac1.png" group-title="Vua Sân Cỏ TV" , 🟡 01:00 18/10 ⚽ SC Telstar vs Feyenoord (Tôn Quyền)
 https://cdn-global.ebaclofen.org/vsc/jonhny6/index.m3u8
 #EXTINF:-1 tvg-logo="https://global-cdn.cdnx.tech/football/team/7a192686d30c1ad031d2fb605eaf2f2a.png" group-title="Vua Sân Cỏ TV" , 01:45 18/10 ⚽ AS Roma vs Genoa (Lưu Bang)
 https://cdn1-global.ebaclofen.org/live/pro6/index.m3u8
@@ -121,12 +121,6 @@ https://live05.zhwpg.app/live/14707124_tsc.flv
 https://live05.miekgo.app/live/14707124_tsc.m3u8
 #EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/c31f023a2cc8adbcc3e24344d81b9609.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Bologna F.C. 1909 vs Inter Milan (BLV STING) [hls]
 https://live05.zhwpg.app/live/14707124_tsc.m3u8
-#EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/dff00f1fd4a7dd2feac000b462416867.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (BLV CASTING) [flv]
-https://live05.zhwpg.app/live/95826384_tsc.flv
-#EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/dff00f1fd4a7dd2feac000b462416867.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (BLV CASTING) [hls 2]
-https://live05.miekgo.app/live/95826384_tsc.m3u8
-#EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/dff00f1fd4a7dd2feac000b462416867.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (BLV CASTING) [hls]
-https://live05.zhwpg.app/live/95826384_tsc.m3u8
 #EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/dff00f1fd4a7dd2feac000b462416867.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (BLV PEPSI) [flv]
 https://live05.zhwpg.app/live/59444581_tsc.flv
 #EXTINF:-1 tvg-logo="https://img.gvapi.cc/football/team/dff00f1fd4a7dd2feac000b462416867.png!w80" group-title="Cola TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (BLV PEPSI) [hls 2]
@@ -329,14 +323,6 @@ https://playback.livetl002.com/live/6a439a7fb89dded67b208b87.m3u8
 https://playback.livetl002.com/live/6a704ad865997681f18c2160.flv
 #EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/018e260ad68bdad741c61e3171c4c608.png" group-title="Gà Vàng 24h TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (Thichduthu) [hls]
 https://playback.livetl002.com/live/6a704ad865997681f18c2160.m3u8
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/e4wyrn4hnwnq86p/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:00 17/10 ⚽ Inter Turku vs AC Oulu (HD POLO)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-10.flv?auth_key=3000001792256090-0-0-b2cb7ec4b96a8c96419e18e0a293026e
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/e4wyrn4hnwnq86p/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:00 17/10 ⚽ Inter Turku vs AC Oulu (POLO)
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
-#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.jorvakstreamcache.com/live/channel10.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/v2y8m4zhd66ql07/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:15 17/10 ⚽ Strasbourg vs PSG (ASTRA)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
@@ -344,19 +330,43 @@ https://live2.jorvakstreamcache.com/live/channel11.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/v2y8m4zhd66ql07/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:15 17/10 ⚽ Strasbourg vs PSG (HD ASTRA)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792255844-0-0-5cb4581455b1744719ba500e861b90a2
+https://live2.domaincdn.cc/livecdn/channel-11.flv?auth_key=3000001792256730-0-0-637e3cdd5890fb07d6ec636cf9147b62
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/9vjxm8gh6nkr6od/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:30 17/10 ⚽ AIK Solna vs IFK Goteborg (HD JEAN)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.domaincdn.cc/livecdn/channel-7.flv?auth_key=3000001792256890-0-0-db2a789908dd70c98db529d0e5a60987
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/9vjxm8gh6nkr6od/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:30 17/10 ⚽ AIK Solna vs IFK Goteborg (JEAN)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.jorvakstreamcache.com/live/channel7.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/y0or5jh1ld0qwzv/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:40 17/10 ⚽ Neom SC vs Al-Ettifaq (HD XMEN)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001792256117-0-0-a46d6012c17fd4debf32077d8c76457f
+https://live2.domaincdn.cc/livecdn/channel-13.flv?auth_key=3000001792256929-0-0-c53a63f1897e19aaed461fa8d014793e
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/y0or5jh1ld0qwzv/image/small" group-title="Xôi Lạc Z TV" , 🟢 22:40 17/10 ⚽ Neom SC vs Al-Ettifaq (XMEN)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
 https://live2.jorvakstreamcache.com/live/channel13.flv
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/56ypq3nhdpymd7o/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (HD RAVEN)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.domaincdn.cc/livecdn/channel-21.flv?auth_key=3000001792256944-0-0-e87903a48eb316adea6fc65080e2ae8d
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/56ypq3nhdpymd7o/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 ⚽ Fenerbahce vs Alanyaspor (RAVEN)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.jorvakstreamcache.com/live/channel21.flv
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/9dn1m1ghz8emoep/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 ⚽ Viking vs Fredrikstad (HD HIRO)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.domaincdn.cc/livecdn/channel-14.flv?auth_key=3000001792256969-0-0-0594ab243e4af495b2e3e3226de49545
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/9dn1m1ghz8emoep/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 ⚽ Viking vs Fredrikstad (HIRO)
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
+https://live2.jorvakstreamcache.com/live/channel14.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/volleyball/team/j1l4rjdho1jr7vx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 🏐 Verona vs Lube Civitanova (HD TYSON)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792256123-0-0-013f35e2c06417cb9b9d6f8f59c7ba51
+https://live2.domaincdn.cc/livecdn/channel-33.flv?auth_key=3000001792256976-0-0-c4552db79085eae7ad7d491a1b83f2a7
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/volleyball/team/j1l4rjdho1jr7vx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:00 17/10 🏐 Verona vs Lube Civitanova (TYSON)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
@@ -364,7 +374,7 @@ https://live2.jorvakstreamcache.com/live/channel33.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/yl5ergphjy2r8k0/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Bayern Munich vs RB Leipzig (BRADY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.pro2cdnlive.com/live/channel15.flv
+https://live2.jorvakstreamcache.com/live/channel15.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/yl5ergphjy2r8k0/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Bayern Munich vs RB Leipzig (HD BRADY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
@@ -372,23 +382,23 @@ https://live2.pro2cdnlive.com/live/channel-15.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/8y39mp1h8dpmojx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Newcastle United vs Aston Villa (FULL HD ROY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792256041-0-0-9389c8f38e0ee7ded9efd46adb530f04
+https://live2.domaincdn.cc/livecdn/channel-1.flv?auth_key=3000001792256882-0-0-a3f18a841f7d6c6e46e4f5e6fa36d58d
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/8y39mp1h8dpmojx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Newcastle United vs Aston Villa (KEN)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=dff5a1777a628a86e472beed6caeb5a8&wsABSTime=1792299219
+https://live1.quickscoreboardz.com/live/channel18.flv?wsSecret=836db9a7643a60040e4bb5bdeead1c9b&wsABSTime=1792300077
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/8y39mp1h8dpmojx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Newcastle United vs Aston Villa (KEN)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001792256015-0-0-2fe96fd025a48f6a3f38e2adc63817a1
+https://live2.domaincdn.cc/livecdn/channel-18.flv?auth_key=3000001792256874-0-0-a9e7a9ab37c76c54f77585429c625027
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/8y39mp1h8dpmojx/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Newcastle United vs Aston Villa (ROY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.jorvakstreamcache.com/live/channel1.flv
+https://live2.pro2cdnlive.com/live/channel1.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/d23xmvkhz9nqg8n/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (FABIO)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001792255951-0-0-8186eee6deea5f5d761a95463fcd0e90
+https://live2.domaincdn.cc/livecdn/channel-2.flv?auth_key=3000001792256812-0-0-9a374a895932c252aec3d77458a139dd
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/d23xmvkhz9nqg8n/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (FABIO)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
@@ -396,16 +406,16 @@ https://live2.jorvakstreamcache.com/live/channel2.flv
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/d23xmvkhz9nqg8n/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (FULL HD NICK)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.pro2cdnlive.com/live/channel-5.flv
+https://live2.domaincdn.cc/livecdn/channel-5.flv?auth_key=3000001792256820-0-0-9fefa25afca4dfb81bbccb4cd0b9a056
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/d23xmvkhz9nqg8n/image/small" group-title="Xôi Lạc Z TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (NICK)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live1.quickscoreboardz.com/live/channel5.flv?wsSecret=9c4e47c320034ca29e3fc01f159a5996&wsABSTime=1792299144
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/lol/team/k82repjtv5jlqep/image/small" group-title="Xôi Lạc Z TV" , 01:00 18/10 🎮 MVK Esports vs FURIA Esports (HD MARTY)
+https://live2.pro2cdnlive.com/live/channel5.flv
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/lol/team/k82repjtv5jlqep/image/small" group-title="Xôi Lạc Z TV" , 🟡 01:00 18/10 🎮 MVK Esports vs FURIA Esports (HD MARTY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
-https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792256148-0-0-1b57a6c66ee7c993a059404e8334c301
-#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/lol/team/k82repjtv5jlqep/image/small" group-title="Xôi Lạc Z TV" , 01:00 18/10 🎮 MVK Esports vs FURIA Esports (MARTY)
+https://live2.domaincdn.cc/livecdn/channel-30.flv?auth_key=3000001792257000-0-0-7993c7b745d65dc58a157c9702b0626b
+#EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/lol/team/k82repjtv5jlqep/image/small" group-title="Xôi Lạc Z TV" , 🟡 01:00 18/10 🎮 MVK Esports vs FURIA Esports (MARTY)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Mobile Safari/537.36
 #EXTVLCOPT:http-referrer=https://xlz.domainkqt.cc/
 https://live2.jorvakstreamcache.com/live/channel30.flv
@@ -621,6 +631,26 @@ https://hls.lauthaitv.cc/live/metalist-livyi-ukrprem/index.m3u8
 https://flv.lauthaitv.cc/live/cahcm-viettel-vleague.flv
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/77a85d93-97a0-4994-9997-809d505e5ae5" group-title="S8 TV" , 18:00 18/10 ⚽ Cong An Ho Chi Minh FC vs The Cong Viettel (NGƯỜI THỎ) [hls]
 https://hls.lauthaitv.cc/live/cahcm-viettel-vleague/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/111c7abc-f17f-4056-aadd-c60c19e80b0f" group-title="S8 TV" , 19:30 18/10 ⚽ FC Belshina Babruisk vs Slavia Mozyr (NGƯỜI PHÁO) [flv]
+https://flv.lauthaitv.cc/live/belshi-slavia-blrprem.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/111c7abc-f17f-4056-aadd-c60c19e80b0f" group-title="S8 TV" , 19:30 18/10 ⚽ FC Belshina Babruisk vs Slavia Mozyr (NGƯỜI PHÁO) [hls]
+https://hls.lauthaitv.cc/live/belshi-slavia-blrprem/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/ce64be3f-0673-425d-8f3c-e7a18b0ec3f7" group-title="S8 TV" , 21:00 18/10 ⚽ Karagumruk vs Keciorengucu (NGƯỜI BẠC) [flv]
+https://flv.lauthaitv.cc/live/kara-kecio-tur1st.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/ce64be3f-0673-425d-8f3c-e7a18b0ec3f7" group-title="S8 TV" , 21:00 18/10 ⚽ Karagumruk vs Keciorengucu (NGƯỜI BẠC) [hls]
+https://hls.lauthaitv.cc/live/kara-kecio-tur1st/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/7ffb8afd-a533-4450-84b2-c42fed219a3d" group-title="S8 TV" , 22:00 18/10 ⚽ FC Universitatea Cluj vs Arges (NGƯỜI DÊ) [flv]
+https://flv.lauthaitv.cc/live/ucluj-arges-romliga.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/7ffb8afd-a533-4450-84b2-c42fed219a3d" group-title="S8 TV" , 22:00 18/10 ⚽ FC Universitatea Cluj vs Arges (NGƯỜI DÊ) [hls]
+https://hls.lauthaitv.cc/live/ucluj-arges-romliga/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/1ae005a1-78e4-498b-8995-f70205fd99e7" group-title="S8 TV" , 22:05 18/10 ⚽ Al Fayha vs Al Ahli (NGƯỜI CÁO) [flv]
+https://flv.lauthaitv.cc/live/fayha-ahli-ksapro.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/1ae005a1-78e4-498b-8995-f70205fd99e7" group-title="S8 TV" , 22:05 18/10 ⚽ Al Fayha vs Al Ahli (NGƯỜI CÁO) [hls]
+https://hls.lauthaitv.cc/live/fayha-ahli-ksapro/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/3fcbff99-d995-4449-a018-dc71a9890b69" group-title="S8 TV" , 00:00 19/10 ⚽ Viborg vs Midtjylland (NGƯỜI BẠC) [flv]
+https://flv.lauthaitv.cc/live/vib-mid-densup.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/3fcbff99-d995-4449-a018-dc71a9890b69" group-title="S8 TV" , 00:00 19/10 ⚽ Viborg vs Midtjylland (NGƯỜI BẠC) [hls]
+https://hls.lauthaitv.cc/live/vib-mid-densup/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.fotmob.com/image_resources/logo/teamlogo/9857.png" group-title="Sao Kê TV" , 🟢 23:00 17/10 ⚽ Bologna vs Inter (Tít) [hls]
 #EXTVLCOPT:http-referrer=https://sk.mediastation.live/
 https://wtyi0525.edgemaxcdn.org/live/x2-hd-1111/playlist.m3u8
@@ -907,8 +937,6 @@ https://gckc0525.edgemaxcdn.org/live/chuoikemhd/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://media.chuoichientv.net/media/uploads/20250623_131433_e85dcdc4.png" group-title="Chuối Chiên TV" , 08:00 19/10 ⚽ Monterrey vs Pachuca (Chuối Sấy) [FHD] [hls]
 #EXTVLCOPT:http-referrer=https://live.chuoichien.tv/
 https://gckc0525.edgemaxcdn.org/live/chuoisayhd/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9C8u5REg6anHhtvSgx9SI9-mj5EWxpD4ptLm1BvZEhrYGTfQlAl-pPQLZ&s=10" group-title="Giờ Vàng TV" , 🟢 21:00 17/10 🎮 Semi vs Finals (Mickey) [hls]
-https://ftlh5sc02iliv.vcdn.cloud/1792169940_hd/1792169940_hd@720p.m3u8
 #EXTINF:-1 tvg-logo="https://static.flashscore.com/res/image/data/06x6Z2Yg-4Y9TamWM.png" group-title="Giờ Vàng TV" , 🟢 22:00 17/10 🥊🥋 Dubois vs Wardley (Cầy) [hls]
 https://ftlh5sc02iliv.vcdn.cloud/1792170062_hd/1792170062_hd@720p.m3u8
 #EXTINF:-1 tvg-logo="https://images.keovip88.net/images/teams/strasbourg.png" group-title="Giờ Vàng TV" , 🟢 22:15 17/10 ⚽ Strasbourg vs Paris Saint Germain (Ngọng) [hls]
@@ -963,7 +991,7 @@ https://freem3u.xyz/static/no-signal/low.m3u8
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://static.flashscore.com/res/image/data/0rpuWOAr-6FZ2yXJ6.png" group-title="Giờ Vàng TV" , 12:05 18/10 🏐 Astemo Rivale Ibaraki Nữ vs Gunma Greenwings Nữ (blv-sun) [hls]
 https://freem3u.xyz/static/no-signal/low.m3u8
-#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261014/4a770ccdcfbdeedd1a636a9f20cda782.png" group-title="Sút Bóng TV" , 01:00 18/10 ⚽ SC Telstar vs Feyenoord (TUẤN CÙI)
+#EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261014/4a770ccdcfbdeedd1a636a9f20cda782.png" group-title="Sút Bóng TV" , 🟡 01:00 18/10 ⚽ SC Telstar vs Feyenoord (TUẤN CÙI)
 #EXTVLCOPT:http-referrer=https://sutbong-tv.net/
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://sta.vnres.co/file/common/20261014/a8c52b62ef333563357f890bc93176ae.png" group-title="Sút Bóng TV" , 01:45 18/10 ⚽ AS Roma vs Genoa (BLV HEHE)
@@ -1408,22 +1436,22 @@ https://pull1.digitalcdn.net/live/91fa764170e340358c4487ebfa75c5c9/index.m3u8
 #EXTVLCOPT:http-referrer=https://phalang.live/
 https://pull.digitalcdn.net/live/91fa764170e340358c4487ebfa75c5c9/index.m3u8
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/95.webp" group-title="Xôi Gấc TV" , 🟢 22:15 17/10 ⚽ Strasbourg vs Paris Saint Germain (Phan Pepsi)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.BtkutK0YINeq.m3u8?expires=1792270232&signature=yUWlgAQPvsuf-pa1Zu7OCP5t49ZB8jRBf-jW40n-020
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.BtkutK0YINeq.m3u8?expires=1792271127&signature=KZ4_humwxezRN_SYkY-rD_lq5KW5BlpulQZdeizml1Y
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/500.webp" group-title="Xôi Gấc TV" , 🟢 23:00 17/10 ⚽ Bologna vs Inter (Hawkeye)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.ZyvVBHzNZsQc.m3u8?expires=1792270235&signature=F0xELsuKLIpK_muXnSkXyWVRGopnhnwwKffCfbGo-OA
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.ZyvVBHzNZsQc.m3u8?expires=1792271129&signature=mvv3JiYpjkXy8rOqyuImfzbInatZyLKrzSCvnYaS79w
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/157.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Bayern München vs RB Leipzig (Phan Đậu)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.yxczD1a0CUcP.m3u8?expires=1792270246&signature=oDUW39IJI0tAO6dmw16XGadDhtTPD4SxL1tKugdhThM
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.yxczD1a0CUcP.m3u8?expires=1792271141&signature=B7DtbNsJTpHzN0K4fohrF8fmn3N9kfsS1hVu6EjzTEE
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/157.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Bayern München vs RB Leipzig (Super Man)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.RS37qCTOKHFV.m3u8?expires=1792270249&signature=y00Y3iL3g1UNrQA-oxDyLj3iN9J7eSp8Pe6JSHVpnow
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.RS37qCTOKHFV.m3u8?expires=1792271143&signature=XhWk5XO3KskvX-LqS44kcpG4b3Bid-1c-0fefUHbtZo
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/34.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Newcastle vs Aston Villa (Deal Pool)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.oEdIPxnlT6UA.m3u8?expires=1792270239&signature=MvDNFUbJGsj2AR92X0vN6b8jhn3MWaN0x-vIFQIBXlg
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.oEdIPxnlT6UA.m3u8?expires=1792271134&signature=bdfrk5PAzmz4Kzrf-Ro_gius75zzxP2btxIj7KB65mw
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/543.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (Black Panther)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.7ESmn5GGzh0a.m3u8?expires=1792270244&signature=Pc6ghzSLBl1d4V_Tsj0AQt9CFUEDlkoaa4v1ffWqCZM
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.7ESmn5GGzh0a.m3u8?expires=1792271138&signature=40DsZdfZBd0zSnij0iXGVKltxDXHF7HZ1V8nCeAFqKQ
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/543.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (Joker)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.3LRpbkQpVxzL.m3u8?expires=1792270237&signature=g4tDN_EF7zuH_eix4O4K-_HlOk-qtLjXQhaloTY5ZnA
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.3LRpbkQpVxzL.m3u8?expires=1792271127&signature=x8bGD7qj8ePiwWsj8v6OnSkmZvo5331pcZUXfZ5t6xs
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/543.webp" group-title="Xôi Gấc TV" , 🟢 23:30 17/10 ⚽ Real Betis vs Barcelona (Phan Quân)
-https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.OXOV7qyrciof.m3u8?expires=1792270242&signature=FvPny0W1BUqf509UOmTJFuz2uzhR2n1VVkXPPq6hVI0
-#EXTINF:-1 group-title="Updated 17/10 23:55", Updated 17/10 23:55
+https://4ac07980a95d.ap-northeast-1.playback.live-video.net/api/video/v1/ap-northeast-1.256097482755.channel.OXOV7qyrciof.m3u8?expires=1792271136&signature=FTF75byP8F1laDD7Fn2BG9DybOapjfPP45uuJO_ADNM
+#EXTINF:-1 group-title="Updated 18/10 00:10", Updated 18/10 00:10
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/79.webp" group-title="Xôi Gấc TV" , 01:45 18/10 ⚽ Lille vs Stade Brestois 29 (Joker)
 https://freem3u.xyz/static/no-signal/low.m3u8
