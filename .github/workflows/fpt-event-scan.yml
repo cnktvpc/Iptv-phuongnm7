@@ -52,6 +52,7 @@ jobs:
           live = int(status["liveEntries"])
           inactive = int(status["inactiveEntries"])
           errors = int(status["probeErrors"])
+          filtered = int(status.get("filteredOutEntries", 0))
 
           # Derive the expected candidate count from the current M3U source.
           # The source list may legitimately grow; do not hard-code an old count.
@@ -74,7 +75,10 @@ jobs:
               f"Expected {expected_candidates} unique source URLs parsed from "
               f"sources/fpt-events-source.m3u, got {candidates}"
           )
-          assert live + inactive + errors == candidates, "Scan totals do not add up"
+          assert live + inactive + errors + filtered == candidates, (
+              "Scan totals do not add up: live + inactive + errors + filtered "
+              f"= {live} + {inactive} + {errors} + {filtered} != {candidates}"
+          )
           assert live > 0 or errors == 0, (
               f"Scan produced no verified live stream and has {errors} probe errors"
           )
@@ -84,8 +88,9 @@ jobs:
           ), "Scan is neither healthy nor a valid partial live scan"
 
           print(
-              f"FPT scan accepted: {candidates} candidates, {live} verified live, "
-              f"{inactive} inactive, {errors} unresolved probes"
+              f"FPT scan accepted: {candidates} candidates, {live} publishable live, "
+              f"{filtered} filtered test streams, {inactive} inactive, "
+              f"{errors} unresolved probes"
           )
           PY
 
