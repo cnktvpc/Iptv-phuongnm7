@@ -1,5 +1,5 @@
 name: Deploy NM7 FPT Event Worker
-# Dungntk9 ownership cutover: verify migrated raw source URLs on deployment
+# cnktvpc ownership cutover: verify migrated raw source URLs on deployment
 
 on:
   push:
@@ -76,7 +76,7 @@ jobs:
           BODY="$(curl -fsSL --retry 3 --retry-delay 2 --max-time 30 "$BASE/scan")"
           echo "$BODY"
           echo "$BODY" | jq -e '
-            .workerVersion == "fpt-event-delivery-v15"
+            .workerVersion == "fpt-event-delivery-v16"
             and .scannerOwner == "GitHub Actions"
             and .deliveryOwner == "Cloudflare Worker"
             and .schedule == "*/5 * * * *"
@@ -85,5 +85,5 @@ jobs:
           PLAYLIST_HEADERS="$(curl -fsS -D - -o /dev/null --retry 3 --retry-delay 2 --max-time 30 "$BASE/fpt-event-live.m3u")"
           echo "$PLAYLIST_HEADERS"
           echo "$PLAYLIST_HEADERS" | grep -qi '^content-type: application/x-mpegURL'
-          echo "$PLAYLIST_HEADERS" | grep -qi '^x-nm7-fpt-version: fpt-event-delivery-v15'
+          echo "$PLAYLIST_HEADERS" | grep -qi '^x-nm7-fpt-version: fpt-event-delivery-v16'
           echo "Verified: Worker is delivery-only; GitHub Actions owns the 5-minute FPT scan."
