@@ -34,7 +34,21 @@ jobs:
           set -euo pipefail
           node --check src/index.js
 
+      - name: Check Cloudflare deployment credentials
+        id: cf-credentials
+        shell: bash
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [[ -n "$CF_ACCOUNT_ID" && -n "$CF_API_TOKEN" ]]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Cloudflare deployment secrets are not configured in this repository. Worker runtime validation still runs, but deployment steps are skipped. Add CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN to enable automatic Worker deployment."
+          fi
       - name: Reconcile Cloudflare Cron schedules
+        if: steps.cf-credentials.outputs.configured == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -49,6 +63,7 @@ jobs:
           echo "$AFTER"
           echo "$AFTER" | jq -e '.success == true and (.result.schedules | length) == 0' >/dev/null
       - name: Deploy Worker
+        if: steps.cf-credentials.outputs.configured == 'true'
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -60,6 +75,7 @@ jobs:
             triggers deploy --config wrangler.jsonc
 
       - name: Verify Cloudflare Cron schedules after deploy
+        if: steps.cf-credentials.outputs.configured == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -70,6 +86,7 @@ jobs:
           echo "$AFTER"
           echo "$AFTER" | jq -e '.success == true and (.result.schedules | length) == 0' >/dev/null
       - name: Verify delivery Worker
+        if: steps.cf-credentials.outputs.configured == 'true'
         shell: bash
         run: |
           set -euo pipefail
