@@ -14,7 +14,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-SOURCE_URL = "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sources/fpt-events-source.m3u"
+SOURCE_URL = "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/sources/fpt-events-source.m3u"
 EVENT7_URL = "https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8"
 VIETNAM_PROXY_LIST_URL = "https://raw.githubusercontent.com/hproxy-com/free-proxy-list/main/by-country/VN.txt"
 OUTPUT_M3U = os.environ.get("OUTPUT_M3U", "generated/fpt-event-live.m3u")
