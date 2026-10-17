@@ -4,7 +4,7 @@ Worker phục vụ playlist **SỰ KIỆN FPT** dựa trên đúng các URL tron
 
 ## Source duy nhất
 
-`https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
+`https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/sources/fpt-events-source.m3u`
 
 Số URL ứng viên được đọc trực tiếp từ source M3U ở mỗi lần quét; không cố định số lượng.
 
@@ -40,7 +40,7 @@ Nếu một số URL 403 nhưng một hoặc nhiều URL khác đã xác minh li
 
 ## Delivery Worker
 
-Worker production: `fpt-event-delivery-v15`.
+Worker production: `fpt-event-delivery-v16`.
 
 Worker **không probe trực tiếp FPT CDN và không có Cron Trigger**. Nó:
 1. lấy file `generated/fpt-event-live.m3u`;
