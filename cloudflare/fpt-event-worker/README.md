@@ -25,6 +25,10 @@ HProxy được dùng ở đây chỉ như một registry transport công khai �
 
 ## Lọc live
 
+Chỉ các URL lấy từ `sources/fpt-events-source.m3u` mới được xét. Những mục được đánh dấu rõ là `TEST` đã bị loại khỏi source chính thức và được chặn thêm tại cả scanner lẫn delivery Worker.
+
+Lưu ý: xác minh HLS/DASH chỉ xác nhận manifest đang hoạt động/cập nhật; bản thân danh sách URL không chứa lịch thi đấu hay tên trận. Vì vậy, muốn lọc chính xác trận nào đang thi đấu (thay vì kênh sự kiện nào có manifest live) thì nguồn phải bổ sung metadata/lịch trận đáng tin cậy.
+
 HLS:
 - phải có `#EXTM3U`;
 - không có `#EXT-X-ENDLIST`;
