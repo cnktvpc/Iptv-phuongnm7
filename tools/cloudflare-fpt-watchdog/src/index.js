@@ -1,8 +1,8 @@
 // Migration: public GitHub read APIs only; no legacy GitHub token or dispatch.
-const REPO = "dungntk9/Iptv-phuongnm7";
+const REPO = "cnktvpc/Iptv-phuongnm7";
 const WORKFLOW = "fpt-event-scan.yml";
 const BRANCH = "main";
-const STATUS_URL = "https://raw.githubusercontent.com/dungntk9/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
+const STATUS_URL = "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/generated/fpt-event-live.status.json";
 const STALE_AFTER_MS = 8 * 60 * 1000;
 const API_VERSION = "2026-03-10";
 const ACTIVE = new Set(["queued", "in_progress", "requested", "waiting", "pending"]);
