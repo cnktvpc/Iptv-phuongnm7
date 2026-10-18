@@ -1,21 +1,21 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-18T05:59:28.509990+00:00",
+  "generatedAt": "2026-10-18T06:17:57.746752+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
-  "liveEntries": 9,
-  "liveDetectedEntries": 9,
+  "liveEntries": 10,
+  "liveDetectedEntries": 10,
   "filteredOutEntries": 0,
   "filterPolicy": "verified-live-only; exclude names explicitly marked TEST",
-  "inactiveEntries": 114,
-  "probeErrors": 4,
+  "inactiveEntries": 117,
+  "probeErrors": 0,
   "allProbeErrorsAre403": false,
-  "scanHealthy": false,
-  "partialScan": true,
+  "scanHealthy": true,
+  "partialScan": false,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 123,
+  "transportCount": 127,
   "event07Transport": "116.104.251.199:2115",
   "liveChannels": [
     {
@@ -53,6 +53,10 @@
     {
       "name": "Sự Kiện FPT Event 01 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-01-4k/4k_hls_avc_v6/index.m3u8?sign=1791624102-MDc1OTczMzQ-0-00de8e921c801d8adb815ad0956258ce"
+    },
+    {
+      "name": "FPT PLAY CHUỖI THỂ THAO - GIẢI TRÍ",
+      "url": "https://vips-livecdn.fptplay.net/live/media/fptplay/live247-hls-avc/fptplay-avc1_5600000=10000-mp4a_131600=20000.m3u8?sign=1792251215-MDc1OTczMzQ-0-c36537271e3149963e5201c0f5904083"
     }
   ],
   "errors": [
@@ -420,10 +424,10 @@
       "name": "Sự kiện FPT Event 08",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-08/hls_avc_v6/index.m3u8",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT Event 08 4K",
