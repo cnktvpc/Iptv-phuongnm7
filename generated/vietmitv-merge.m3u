@@ -69,15 +69,20 @@ https://vmttv.dpdns.org/tv360/?id=360-golf
 https://vmttv.dpdns.org/tv360/?id=360-tennis
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 01
 https://vips-livecdn.fptplay.net/live/media/su-kien-01/hls_avc_v6/index.m3u8
-#EXTGRP:Sự kiện FPT
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 02
 https://vips-livecdn.fptplay.net/live/media/su-kien-02/hls_avc_v6/index.m3u8
-#EXTGRP:Sự kiện FPT
+#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 02
+https://vips-livecdn.fptplay.net/live/media/event-02/hls_avc_v6/index.m3u8
+#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 03
+https://vips-livecdn.fptplay.net/live/media/event-03/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 07
 https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8
-#EXTINF:-1 tvg-logo="https://raw.githubusercontent.com/TV365-VN/TV365-LOGO/main/logo/VTV/FPT%20PLAY.jpg" group-title="Sự kiện FPT" tvg-name="FPT PLAY",FPT PLAY
-#EXTGRP:Sự kiện FPT
-https://vips-livecdn.fptplay.net/live/media/fptplay/live247-hls-avc/index.m3u8
+#EXTINF:-1 group-title="Sự kiện FPT",Sự Kiện FPT Event 01 (4K)
+https://fbox-livecdn.fptplay.net/live/media/event-01-4k/4k_hls_hvc/index.m3u8
+#EXTINF:-1 group-title="Sự kiện FPT",Sự Kiện FPT Event 01 (FHD)
+https://vips-livecdn.fptplay.net/live/media/event-01-4k/4k_hls_avc_v6/index.m3u8?sign=1791624102-MDc1OTczMzQ-0-00de8e921c801d8adb815ad0956258ce
+#EXTINF:-1 group-title="Sự kiện FPT",FPT PLAY CHUỖI THỂ THAO - GIẢI TRÍ
+https://vips-livecdn.fptplay.net/live/media/fptplay/live247-hls-avc/fptplay-avc1_5600000=10000-mp4a_131600=20000.m3u8?sign=1792251215-MDc1OTczMzQ-0-c36537271e3149963e5201c0f5904083
 #EXTINF:-1 tvg-id="vtv1hd" group-title="VTV" tvg-logo="https://r2.epg.io.vn/2026-09-17/1.png", VTV1
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 https://livevlisctcdnw.seenow.vn/livesnv2/VTV1_HD/manifest.mpd
@@ -202,7 +207,7 @@ https://vietanhtv.id.vn/sctv/sctv-4k/index.m3u8
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=190
 #EXTINF:-1 tvg-id="htv2hd" group-title="HTV" tvg-logo="https://s7768.cdn.mytvnet.vn/vimages/a0/07/73/39/9e/e6/a0739-phtv2hd-channel-unkn.png" catchup="append" catchup-days="6" catchup-source="https://api.vthanhtivi.pw/v1/dvr/hplus/htv2-hd-2669/${start}/${offset}", HTV2 - Vie Channel
-https://tv.vietanhtv.top/vieon/vieon.php?id=vie-channel-htv2-hd
+https://freem3u.xyz/api/live/play.m3u8?vid=191
 #EXTINF:-1 tvg-id="htv3" group-title="HTV" tvg-logo="https://raw.githubusercontent.com/vuminhthanh12/vuminhthanh12/refs/heads/main/HTV3.jpg" catchup="append" catchup-days="2" catchup-source="https://tshift.fptplay.net/dvr/htv3_1000.stream/chunks_dvr_range-${start}-${offset}.m3u8", HTV3 - Báo và PTTH Thành Phố Hồ Chí Minh
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://freem3u.xyz/api/live/play.m3u8?vid=192
