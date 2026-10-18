@@ -1,7 +1,7 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-18T01:43:47.391462+00:00",
+  "generatedAt": "2026-10-18T02:09:46.380891+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
@@ -16,7 +16,7 @@
   "partialScan": false,
   "transport": "per-url-rotating-vietnam-proxy",
   "transportCount": 127,
-  "event07Transport": "116.104.251.199:2027",
+  "event07Transport": "116.104.251.199:2115",
   "liveChannels": [
     {
       "name": "Sự kiện FPT 01",
