@@ -71,9 +71,9 @@ https://live05.zhwpg.app/live/19919577_tsc.m3u8
 https://playback.livetl002.com/live/69b8e6f43bcf2231c35d5144.flv
 #EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/845eed665066a19144dad9f96e550b50.png" group-title="Gà Vàng 24h TV" , 🟢 05:00 20/10 ⚽ CA Newell's Old Boys vs CA Central Cordoba SDE (Kayti) [hls]
 https://playback.livetl002.com/live/69b8e6f43bcf2231c35d5144.m3u8
-#EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/86cb19586d66a7d65de64a3bad288c1f.png" group-title="Gà Vàng 24h TV" , 🟡 05:30 20/10 ⚽ Goiás EC vs Nautico (Siêu Quậy) [flv]
+#EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/86cb19586d66a7d65de64a3bad288c1f.png" group-title="Gà Vàng 24h TV" , 🟢 05:30 20/10 ⚽ Goiás EC vs Nautico (Siêu Quậy) [flv]
 https://playback.livetl002.com/live/6a2a59b347bbddd62a8dc4e4.flv
-#EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/86cb19586d66a7d65de64a3bad288c1f.png" group-title="Gà Vàng 24h TV" , 🟡 05:30 20/10 ⚽ Goiás EC vs Nautico (Siêu Quậy) [hls]
+#EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/86cb19586d66a7d65de64a3bad288c1f.png" group-title="Gà Vàng 24h TV" , 🟢 05:30 20/10 ⚽ Goiás EC vs Nautico (Siêu Quậy) [hls]
 https://playback.livetl002.com/live/6a2a59b347bbddd62a8dc4e4.m3u8
 #EXTINF:-1 tvg-logo="https://static.sportsfeed.pro/football/team/aa4d61da1df31972e52e1e62f90ec558.png" group-title="Gà Vàng 24h TV" , 🟡 06:00 20/10 ⚽ Corinthians Paulista vs Vitoria BA (Cố Tư Nghiêm) [flv]
 https://playback.livetl002.com/live/69a1aaa7230584579e2d5ce1.flv
@@ -151,10 +151,34 @@ https://hls.lauthaitv.cc/live/sabah-dort-c1/index.m3u8
 https://flv.lauthaitv.cc/live/nassr-neom-ksapro.flv
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/566fc276-4491-43cf-b28d-796f78580e1a" group-title="S8 TV" , 01:00 21/10 ⚽ Al Nassr FC vs NEOM Sports Club (NGƯỜI CÁO) [hls]
 https://hls.lauthaitv.cc/live/nassr-neom-ksapro/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/706fafa3-d0a1-48a8-b005-1de8a8aae0a4" group-title="S8 TV" , 02:00 21/10 ⚽ Liverpool vs Villarreal CF (NGƯỜI THỎ) [flv]
+https://flv.lauthaitv.cc/live/liv-villa-c1.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/706fafa3-d0a1-48a8-b005-1de8a8aae0a4" group-title="S8 TV" , 02:00 21/10 ⚽ Liverpool vs Villarreal CF (NGƯỜI THỎ) [hls]
+https://hls.lauthaitv.cc/live/liv-villa-c1/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/178c59d1-e702-4239-9451-186ed2002808" group-title="S8 TV" , 02:00 21/10 ⚽ Manchester City vs AEK Athens (NGƯỜI PHÁO) [flv]
+https://flv.lauthaitv.cc/live/mnc-athen-c1.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/178c59d1-e702-4239-9451-186ed2002808" group-title="S8 TV" , 02:00 21/10 ⚽ Manchester City vs AEK Athens (NGƯỜI PHÁO) [hls]
+https://hls.lauthaitv.cc/live/mnc-athen-c1/index.m3u8
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/708629d1-761e-4507-aaad-1fd1509827b5" group-title="S8 TV" , 02:00 21/10 ⚽ Paris Saint Germain vs FC Barcelona (NGƯỜI CAT) [flv]
 https://flv.lauthaitv.cc/live/psg-barce-c1-cat.flv
 #EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/708629d1-761e-4507-aaad-1fd1509827b5" group-title="S8 TV" , 02:00 21/10 ⚽ Paris Saint Germain vs FC Barcelona (NGƯỜI CAT) [hls]
 https://hls.lauthaitv.cc/live/psg-barce-c1-cat/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/cc3fb524-e002-4712-8fa5-9e33ea0367e9" group-title="S8 TV" , 02:00 21/10 ⚽ VfB Stuttgart vs Atletico Madrid (NGƯỜI DÊ) [flv]
+https://flv.lauthaitv.cc/live/stut-atm-c1.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/cc3fb524-e002-4712-8fa5-9e33ea0367e9" group-title="S8 TV" , 02:00 21/10 ⚽ VfB Stuttgart vs Atletico Madrid (NGƯỜI DÊ) [hls]
+https://hls.lauthaitv.cc/live/stut-atm-c1/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/9eab5dd0-0c07-4928-b5fb-32a3b7349ea0" group-title="S8 TV" , 07:30 21/10 ⚽ Vasco de Gama vs Boca Juniors (NGƯỜI NẶN) [flv]
+https://flv.lauthaitv.cc/live/vasco-boca-copasuda.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/9eab5dd0-0c07-4928-b5fb-32a3b7349ea0" group-title="S8 TV" , 07:30 21/10 ⚽ Vasco de Gama vs Boca Juniors (NGƯỜI NẶN) [hls]
+https://hls.lauthaitv.cc/live/vasco-boca-copasuda/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/5357f177-6af2-4bc1-a070-5b2e5c29be28" group-title="S8 TV" , 08:00 21/10 ⚽ FC Juarez vs Atlante FC (NGƯỜI SÓI) [flv]
+https://flv.lauthaitv.cc/live/juarez-atlante-mexliga.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/5357f177-6af2-4bc1-a070-5b2e5c29be28" group-title="S8 TV" , 08:00 21/10 ⚽ FC Juarez vs Atlante FC (NGƯỜI SÓI) [hls]
+https://hls.lauthaitv.cc/live/juarez-atlante-mexliga/index.m3u8
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/24f7e459-66be-4146-b868-4422dccfd293" group-title="S8 TV" , 10:00 21/10 ⚽ Tigres UANL vs Club Leon (NGƯỜI NẶN) [flv]
+https://flv.lauthaitv.cc/live/tigres-leon-mexliga.flv
+#EXTINF:-1 tvg-logo="https://s8tvkc.top/wp-json/s8-image/24f7e459-66be-4146-b868-4422dccfd293" group-title="S8 TV" , 10:00 21/10 ⚽ Tigres UANL vs Club Leon (NGƯỜI NẶN) [hls]
+https://hls.lauthaitv.cc/live/tigres-leon-mexliga/index.m3u8
 #EXTINF:-1 tvg-logo="https://images.fotmob.com/image_resources/logo/teamlogo/9808.png" group-title="Sao Kê TV" , 🟡 06:00 20/10 ⚽ Corinthians vs Vitória (Teppy) [hls]
 #EXTVLCOPT:http-referrer=https://sk.mediastation.live/
 https://wtyi0525.edgemaxcdn.org/live/x31-hd-1111/playlist.m3u8
@@ -389,7 +413,7 @@ https://pull1.digitalcdn.net/live/bf5c364759ed48b89be79d1526e7e39a/index.m3u8
 #EXTINF:-1 tvg-logo="https://imgts.sportpulseapiz.com/football/team/l7oqdeh6dz6r510/image/small" group-title="Phá Làng TV" , 18:00 21/10 ⚽ Como U19 vs Manchester Utd U19 (LÝ LONG) [geo]
 #EXTVLCOPT:http-referrer=https://phalang.live/
 https://pull1.digitalcdn.net/live/ce9c79bf1b23479ca4ab4d1b92403e4f/index.m3u8
-#EXTINF:-1 group-title="Updated 20/10 05:05", Updated 20/10 05:05
+#EXTINF:-1 group-title="Updated 20/10 05:20", Updated 20/10 05:20
 https://freem3u.xyz/static/no-signal/low.m3u8
 #EXTINF:-1 tvg-logo="https://xoigac.top/images/football/teams/131.webp" group-title="Xôi Gấc TV" , 🟡 06:00 20/10 ⚽ Corinthians vs Vitoria (Raccoon)
 https://freem3u.xyz/static/no-signal/low.m3u8
