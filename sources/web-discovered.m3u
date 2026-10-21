@@ -1,7 +1,11 @@
 #EXTM3U
 #EXTINF:-1 group-title="S8 TV",Sports live
-https://media.monitorhub.dev/media/hls/9b3eb51eaf154cf1bd333f60ea69dafc/media-2/stream.m3u8
+https://media.lauthaitv.site/hls/0542ad8d-1129-454e-b8e1-56e2852582ea/attempt-1/master.m3u8
+#EXTINF:-1 group-title="S8 TV",Sports live
+https://media.lauthaitv.site/hls/0542ad8d-1129-454e-b8e1-56e2852582ea/attempt-1/360p/index.m3u8
+#EXTINF:-1 group-title="S8 TV",Sports live
+https://media.lauthaitv.site/hls/0542ad8d-1129-454e-b8e1-56e2852582ea/attempt-1/1080p/index.m3u8
 #EXTINF:-1 group-title="Gà Vàng 33 TV",02:00 22/10 SẮP DIỄN RA UEFA Champions League FC Bayern Munich VS Arsenal 23:45 22/10 SẮP DIỄN RA UEFA Europa League Lech Poznan VS Sunderland 02:00 23/10 SẮP DIỄN RA UEFA Europa League Bournemouth AFC VS AC Milan 20:30 23/10 SẮP D
 https://live2.zktsva.app/live/304565.m3u8
-#EXTINF:-1 group-title="Gà Vàng 33 TV",02:00 22/10 SẮP DIỄN RA UEFA Champions League Aston Villa VS Viking 15:30 22/10 SẮP DIỄN RA Indonesian Super League Persatuan sepak bola Indonesia Kediri VS PSS Sleman 02:00 23/10 SẮP DIỄN RA UEFA Europa League Celtic FC VS RC Celt
-https://live2.zktsva.app/live/303098.m3u8
+#EXTINF:-1 group-title="Gà Vàng 33 TV",23:45 21/10 LIVE UEFA Champions League Como VS Manchester United 02:00 22/10 SẮP DIỄN RA UEFA Champions League Real Madrid VS RB Leipzig 02:00 23/10 SẮP DIỄN RA UEFA Europa League Besiktas JK VS Crystal Palace 19:15 23/10 SẮP DIỄN
+https://live2.zktsva.app/live/294335.m3u8
