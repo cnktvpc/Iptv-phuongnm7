@@ -67,34 +67,28 @@ https://vmttv.dpdns.org/tv360/?id=360-golf
 #EXTINF:-1 group-title="Thể Thao" tvg-logo="https://img-zlr1.tv360.vn/image1/2026/04/16/15/177632805669/a8c9881d6b08_640_360.png", 360 Tennis
 #EXTVLCOPT:http-user-agent=Dalvik/2.1.0
 https://vmttv.dpdns.org/tv360/?id=360-tennis
-#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 01
-https://vips-livecdn.fptplay.net/live/media/su-kien-01/hls_avc_v6/index.m3u8
-#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 02
-https://vips-livecdn.fptplay.net/live/media/su-kien-02/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 03
 https://vips-livecdn.fptplay.net/live/media/su-kien-03/hls_avc_v6/index.m3u8
-#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 04
-https://vips-livecdn.fptplay.net/live/media/su-kien-04/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 05
 https://vips-livecdn.fptplay.net/live/media/su-kien-05/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 06
 https://vips-livecdn.fptplay.net/live/media/su-kien-06/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 07
 https://vips-livecdn.fptplay.net/live/media/su-kien-07/hls_avc_v6/index.m3u8
+#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 08
+https://vips-livecdn.fptplay.net/live/media/su-kien-08/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT 09
 https://vips-livecdn.fptplay.net/live/media/su-kien-09/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 01
 https://vips-livecdn.fptplay.net/live/media/event-01/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 02
 https://vips-livecdn.fptplay.net/live/media/event-02/hls_avc_v6/index.m3u8
+#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 03
+https://vips-livecdn.fptplay.net/live/media/event-03/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 05
 https://vips-livecdn.fptplay.net/live/media/event-05/hls_avc_v6/index.m3u8
-#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 06
-https://vips-livecdn.fptplay.net/live/media/event-06/hls_avc_v6/index.m3u8
-#EXTINF:-1 group-title="Sự kiện FPT",Sự Kiện FPT Su Kiện 03 (4K)
-https://fbox-livecdn.fptplay.net/live/media/su-kien-03-4k/4k_hls_hvc/index.m3u8
-#EXTINF:-1 group-title="Sự kiện FPT",Sự Kiện FPT Su Kiện 03 (FHD)
-https://vips-livecdn.fptplay.net/live/media/su-kien-03-4k/4k_hls_avc_v6/index.m3u8?sign=REPLACE_WITH_VALID_SIGNATURE_03
+#EXTINF:-1 group-title="Sự kiện FPT",Sự kiện FPT Event 07
+https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="Sự kiện FPT",FPT PLAY CHUỖI THỂ THAO - GIẢI TRÍ
 https://vips-livecdn.fptplay.net/live/media/fptplay/live247-hls-avc/fptplay-avc1_5600000=10000-mp4a_131600=20000.m3u8?sign=1792251215-MDc1OTczMzQ-0-c36537271e3149963e5201c0f5904083
 #EXTINF:-1 tvg-id="vtv1hd" group-title="VTV" tvg-logo="https://r2.epg.io.vn/2026-09-17/1.png", VTV1
