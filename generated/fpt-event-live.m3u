@@ -1,8 +1,6 @@
 #EXTM3U
 #NM7-SCAN-VERIFIED: true
 #NM7-SCAN-MODE: vietnam-transport-source-only
-#EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT 01
-https://vips-livecdn.fptplay.net/live/media/su-kien-01/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT 05
 https://vips-livecdn.fptplay.net/live/media/su-kien-05/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT 06
@@ -17,6 +15,8 @@ https://vips-livecdn.fptplay.net/live/media/su-kien-09/hls_avc_v6/index.m3u8
 https://vips-livecdn.fptplay.net/live/media/event-01/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 02
 https://vips-livecdn.fptplay.net/live/media/event-02/hls_avc_v6/index.m3u8
+#EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 05
+https://vips-livecdn.fptplay.net/live/media/event-05/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 06
 https://vips-livecdn.fptplay.net/live/media/event-06/hls_avc_v6/index.m3u8
 #EXTINF:-1 group-title="SỰ KIỆN FPT",Sự kiện FPT Event 07
