@@ -1,27 +1,23 @@
 {
   "service": "NM7 FPT Event Live Scanner",
   "scannerVersion": "source-probe-v1",
-  "generatedAt": "2026-10-25T07:44:46.456434+00:00",
+  "generatedAt": "2026-10-25T08:12:28.315135+00:00",
   "sourceUrl": "https://raw.githubusercontent.com/cnktvpc/Iptv-phuongnm7/main/sources/fpt-events-source.m3u",
   "sourceOnly": true,
   "candidates": 127,
-  "liveEntries": 10,
-  "liveDetectedEntries": 10,
+  "liveEntries": 8,
+  "liveDetectedEntries": 8,
   "filteredOutEntries": 0,
   "filterPolicy": "verified-live-only; exclude names explicitly marked TEST",
-  "inactiveEntries": 114,
-  "probeErrors": 3,
+  "inactiveEntries": 91,
+  "probeErrors": 28,
   "allProbeErrorsAre403": false,
   "scanHealthy": false,
   "partialScan": true,
   "transport": "per-url-rotating-vietnam-proxy",
-  "transportCount": 124,
-  "event07Transport": "171.236.130.227:12588",
+  "transportCount": 99,
+  "event07Transport": "171.236.130.227:22470",
   "liveChannels": [
-    {
-      "name": "Sự kiện FPT 02",
-      "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-02/hls_avc_v6/index.m3u8"
-    },
     {
       "name": "Sự kiện FPT 03",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-03/hls_avc_v6/index.m3u8"
@@ -39,6 +35,10 @@
       "url": "https://vips-livecdn.fptplay.net/live/media/event-03/hls_avc_v6/index.m3u8"
     },
     {
+      "name": "Sự kiện FPT Event 05",
+      "url": "https://vips-livecdn.fptplay.net/live/media/event-05/hls_avc_v6/index.m3u8"
+    },
+    {
       "name": "Sự kiện FPT Event 06",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-06/hls_avc_v6/index.m3u8"
     },
@@ -47,16 +47,8 @@
       "url": "https://vips-livecdn.fptplay.net/live/media/event-07/hls_avc_v6/index.m3u8"
     },
     {
-      "name": "Sự Kiện FPT Su Kiện 03 (4K)",
-      "url": "https://fbox-livecdn.fptplay.net/live/media/su-kien-03-4k/4k_hls_hvc/index.m3u8"
-    },
-    {
       "name": "Sự Kiện FPT Su Kiện 03 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-03-4k/4k_hls_avc_v6/index.m3u8?sign=REPLACE_WITH_VALID_SIGNATURE_03"
-    },
-    {
-      "name": "FPT PLAY CHUỖI THỂ THAO - GIẢI TRÍ",
-      "url": "https://vips-livecdn.fptplay.net/live/media/fptplay/live247-hls-avc/fptplay-avc1_5600000=10000-mp4a_131600=20000.m3u8?sign=1792251215-MDc1OTczMzQ-0-c36537271e3149963e5201c0f5904083"
     }
   ],
   "errors": [
@@ -72,10 +64,10 @@
     {
       "name": "Sự kiện FPT 02",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-02/hls_avc_v6/index.m3u8",
-      "live": true,
-      "status": 200,
-      "content_type": "application/vnd.apple.mpegurl",
-      "error": null,
+      "live": false,
+      "status": 403,
+      "content_type": "text/html",
+      "error": "HTTP 403",
       "inactive_reason": null
     },
     {
@@ -253,10 +245,10 @@
       "name": "Sự kiện FPT 4K 04",
       "url": "https://vips-livecdn.fptplay.net/live/media/su-kien-04-4k/dash_hvc/index.mpd",
       "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "status": 404,
+      "content_type": "text/html; charset=iso-8859-1",
+      "error": null,
+      "inactive_reason": "HTTP 404"
     },
     {
       "name": "Sự kiện FPT Event 02 4K",
@@ -369,10 +361,10 @@
     {
       "name": "Sự kiện FPT Event 05",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-05/hls_avc_v6/index.m3u8",
-      "live": false,
-      "status": 403,
-      "content_type": "text/html",
-      "error": "HTTP 403",
+      "live": true,
+      "status": 200,
+      "content_type": "application/vnd.apple.mpegurl",
+      "error": null,
       "inactive_reason": null
     },
     {
@@ -595,10 +587,10 @@
       "name": "Sự Kiện FPT Event 07 (FHD)",
       "url": "https://vips-livecdn.fptplay.net/live/media/event-07-4k/4k_hls_avc_v6/index.m3u8?sign=REPLACE_WITH_VALID_SIGNATURE_07",
       "live": false,
-      "status": 403,
+      "status": 404,
       "content_type": "text/html",
-      "error": "HTTP 403",
-      "inactive_reason": null
+      "error": null,
+      "inactive_reason": "HTTP 404"
     }
   ]
 }
