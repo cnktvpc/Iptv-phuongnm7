@@ -304,7 +304,7 @@ https://s7771.cdn.mytvnet.vn/pkg20/live_dzones/bbcearth.smil/manifest.mpd
 https://s935.cdn.mytvnet.vn/pkg20/live_dzones/aplus.smil/manifest.mpd
 #EXTINF:-1 tvg-id="bloomberg-tieng-anh" tvg-name="BLOOMBERG - Tiếng Anh" tvg-chno="306" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bloomberg-television-us.png?raw=true" group-title="Tin Tức",BLOOMBERG - Tiếng Anh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
-https://dai.google.com/linear/hls/pa/event/PwTJe4aZRvSBjbWY7_VSzA/stream/b68e5b76-6cb4-4a28-b023-04679de799b4:CHS/master.m3u8
+https://dai.google.com/linear/hls/pa/event/PwTJe4aZRvSBjbWY7_VSzA/stream/c779f414-620d-4f3e-9e0d-2524e6185255:MRN2/master.m3u8
 #EXTINF:-1 tvg-id="cnn.VN" tvg-name="CNN - Việt Nam" tvg-chno="499" tvg-logo="https://freem3u.xyz/static/images/global/cnn.png" group-title="Tin Tức",CNN - Việt Nam
 #KODIPROP:inputstream=inputstream.adaptive
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
@@ -646,7 +646,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=220
 https://freem3u.xyz/api/live/play.m3u8?vid=91
 #EXTINF:-1 tvg-id="vinhlong.FM90_2.VN" tvg-name="VINH LONG (FM90.2MHz)" tvg-chno="278" tvg-logo="https://freem3u.xyz/static/images/radio/vinhlong.png" group-title="THVL",VINH LONG (FM90.2MHz)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
-https://catchup.thvli.vn/-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmYTVlZjVhLTdiNDctNDEyZi05ZTMxLTc3ZmFjYzdlOTgyNCIsImV4cCI6MTc5MzAyNjU3MywidXJpIjoiL3JhZGlvIiwiaWF0IjoxNzkzMDA0OTczfQ.3dDcln3-lyXXzudNLOff78gkX62WAOgwnmY-sEIK5vg-/radio/playlist.m3u8
+https://catchup.thvli.vn/-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEzYjJiYmYxLTczMDEtNDM3NC05MmM3LWU2ODEyNzI5ZTEyZCIsImV4cCI6MTc5MzAyOTA2NiwidXJpIjoiL3JhZGlvIiwiaWF0IjoxNzkzMDA3NDY2fQ.c7WRYS1nZ34JcxYx9T6WYmlhol6YxOYzNx6h3KwVopY-/radio/playlist.m3u8
 #EXTINF:-1 tvg-id="cgtn" tvg-name="CGTN - China Global Television Network" tvg-chno="106" tvg-logo="https://freem3u.xyz/static/images/china/CGTN.png" group-title="Quốc Tế",CGTN - China Global Television Network
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
 https://english-livebkali.cgtn.com/live/encgtn_0.m3u8
@@ -825,7 +825,7 @@ https://s7771.cdn.mytvnet.vn/pkg20/live_dzones/bbcearth.smil/manifest.mpd
 https://s935.cdn.mytvnet.vn/pkg20/live_dzones/aplus.smil/manifest.mpd
 #EXTINF:-1 tvg-id="bloomberg-tieng-anh" tvg-name="BLOOMBERG - Tiếng Anh" tvg-chno="306" tvg-logo="https://github.com/tv-logo/tv-logos/blob/main/countries/united-states/bloomberg-television-us.png?raw=true" group-title="Quốc Tế",BLOOMBERG - Tiếng Anh
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
-https://dai.google.com/linear/hls/pa/event/PwTJe4aZRvSBjbWY7_VSzA/stream/b68e5b76-6cb4-4a28-b023-04679de799b4:CHS/master.m3u8
+https://dai.google.com/linear/hls/pa/event/PwTJe4aZRvSBjbWY7_VSzA/stream/c779f414-620d-4f3e-9e0d-2524e6185255:MRN2/master.m3u8
 #EXTINF:-1 tvg-id="davinci.VN" tvg-name="DaVinci HD - Việt Nam" tvg-chno="479" tvg-logo="https://freem3u.xyz/static/images/global/davinci.png" group-title="Quốc Tế",DaVinci HD - Việt Nam
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
 https://freem3u.xyz/api/live/play.m3u8?vid=214
@@ -1389,7 +1389,7 @@ https://freem3u.xyz/api/live/play.m3u8?vid=10040
 http://118.107.85.5:1935/radio/dongnai_aac/playlist.m3u8
 #EXTINF:-1 tvg-id="vinhlong.FM90_2.VN" tvg-name="VINH LONG (FM90.2MHz)" tvg-chno="278" tvg-logo="https://freem3u.xyz/static/images/radio/vinhlong.png" group-title="Radio Miền Nam",VINH LONG (FM90.2MHz)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
-https://catchup.thvli.vn/-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNmYTVlZjVhLTdiNDctNDEyZi05ZTMxLTc3ZmFjYzdlOTgyNCIsImV4cCI6MTc5MzAyNjU3MywidXJpIjoiL3JhZGlvIiwiaWF0IjoxNzkzMDA0OTczfQ.3dDcln3-lyXXzudNLOff78gkX62WAOgwnmY-sEIK5vg-/radio/playlist.m3u8
+https://catchup.thvli.vn/-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImEzYjJiYmYxLTczMDEtNDM3NC05MmM3LWU2ODEyNzI5ZTEyZCIsImV4cCI6MTc5MzAyOTA2NiwidXJpIjoiL3JhZGlvIiwiaWF0IjoxNzkzMDA3NDY2fQ.c7WRYS1nZ34JcxYx9T6WYmlhol6YxOYzNx6h3KwVopY-/radio/playlist.m3u8
 #EXTINF:-1 tvg-id="dongthap.FM98_4.VN" tvg-name="DONG THAP (FM98.4MHz)" tvg-chno="282" tvg-logo="https://freem3u.xyz/static/images/radio/dongthap.png" group-title="Radio Miền Nam",DONG THAP (FM98.4MHz)
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 15; SM-S918B Build/AP3A.240905.015.A2) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/135.0.7049.111 Mobile Safari/537.36 vAppTV/1.0.2
 https://618b88f69e53b.streamlock.net/THDTR/thdtradio/playlist.m3u8
